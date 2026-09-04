@@ -1,4 +1,16 @@
-/* ============================================================
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""upgrade_production.py — final production build for limitation-act-1908/.
+Fixes: wireUI crash, silent init failures, BN-optional-chaining, security
+headers, cache strategy, robots, social meta, cache-busting, CRLF."""
+import json
+from pathlib import Path
+
+V = "2"  # cache-bust version
+
+# ============================================================ app.js
+FILES = {}
+FILES["app.js"] = r'''/* ============================================================
    Limitation Act 1908 — PRODUCTION client engine v2
    BM25 search · s.12 calculator · EN/BN · hardened init
    ============================================================ */
@@ -305,3 +317,164 @@ function wireUI(){
     renderBrowse($('#browseFilter').value);renderFAQ();
     if($('#results').innerHTML.trim())runQuery($('#q').value||'article 3');};
 }
+'''
+
+# ============================================================ index.html (production meta)
+FILES["index.html"] = r'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limitation Act 1908 (Bangladesh) — Bilingual Legal KB</title>
+<meta name="description" content="Searchable bilingual (English/বাংলা) knowledge engine for the Limitation Act, 1908 of Bangladesh — limitation periods, deadline calculator, appeals and applications. General information only; not legal advice.">
+<meta name="theme-color" content="#0f1420">
+<meta name="robots" content="index,follow">
+<!-- Open Graph / Twitter (og:url set dynamically) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Limitation Act 1908 (Bangladesh) — Bilingual Legal KB">
+<meta property="og:description" content="All 183 schedule articles · deadline calculator · English + বাংলা. Not legal advice.">
+<meta property="og:url" content="">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap bar-inner">
+    <div class="brand">
+      <span class="logo">⚖️</span>
+      <div>
+        <h1 data-i18n="title">Limitation Act, 1908</h1>
+        <p class="sub" data-i18n="subtitle">Bangladesh · Bilingual Knowledge Engine</p>
+      </div>
+    </div>
+    <button id="langBtn" class="lang-btn" title="Switch language">বাংলা</button>
+  </div>
+</header>
+
+<nav class="tabs wrap" aria-label="Sections">
+  <button class="tab active" data-tab="search">🔍 <span data-i18n="tab_search">Search</span></button>
+  <button class="tab" data-tab="calc">📅 <span data-i18n="tab_calc">Deadline Calculator</span></button>
+  <button class="tab" data-tab="browse">📚 <span data-i18n="tab_browse">Browse Schedule</span></button>
+  <button class="tab" data-tab="faq">❓ <span data-i18n="tab_faq">FAQ</span></button>
+</nav>
+
+<main class="wrap">
+  <section id="tab-search" class="panel active">
+    <div class="searchbox">
+      <input id="q" type="text" autocomplete="off" aria-label="Search"
+        placeholder='Try: "article 113" · "money lent 15/03/2022" · "স্থাবর সম্পত্তির দখল" · "section 19"'>
+      <button id="go" class="btn primary" data-i18n="btn_search">Search</button>
+    </div>
+    <div class="chips">
+      <span class="chip" data-q="article 113">Article 113</span>
+      <span class="chip" data-q="recover possession of immovable property">Possession 12y</span>
+      <span class="chip" data-q="money lent 3 years deadline">Money lent</span>
+      <span class="chip" data-q="appeal to High Court Division">Appeal to HCD</span>
+      <span class="chip" data-q="ধার ফেরতের মামলার মেয়াদ">ধার (BN)</span>
+      <span class="chip" data-q="written acknowledgement of debt">Acknowledgement s.19</span>
+    </div>
+    <div id="results"></div>
+  </section>
+
+  <section id="tab-calc" class="panel">
+    <div class="card pad">
+      <h2 data-i18n="calc_h">Deadline Calculator</h2>
+      <p class="muted" data-i18n="calc_p">Pick the provision, enter the date the period began. Section 12 excludes the first day, so the last day = start + full period.</p>
+      <div class="grid2">
+        <label><span data-i18n="calc_prov">Provision</span>
+          <select id="calcArt" aria-label="Provision"></select></label>
+        <label><span data-i18n="calc_date">Period begins on</span>
+          <input id="calcDate" type="date" aria-label="Start date"></label>
+      </div>
+      <button id="calcGo" class="btn primary" data-i18n="calc_btn">Compute last day</button>
+      <div id="calcOut"></div>
+    </div>
+  </section>
+
+  <section id="tab-browse" class="panel">
+    <input id="browseFilter" class="filter" placeholder="Filter… / ফিল্টার" aria-label="Filter schedule">
+    <div id="browse"></div>
+  </section>
+
+  <section id="tab-faq" class="panel">
+    <div id="faqList"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p id="footDisc"></p>
+    <p class="muted small">Source: The Limitation Act, 1908 (Act No. IX of 1908) · Laws of Bangladesh ·
+    Deployed on Vercel · <a href="/api/search?q=article%20113">JSON API</a></p>
+  </div>
+</footer>
+<noscript><div class="disc">This app requires JavaScript. Data API: /api/search?q=…</div></noscript>
+<script>
+/* set absolute og:url + canonical to current deployment */
+document.querySelectorAll('meta[property="og:url"],link[rel="canonical"]')
+  .forEach(el=>{el.content||(el.content=location.href);el.href&&(el.href=location.href);});
+</script>
+<script src="app.js?v=2"></script>
+</body>
+</html>
+'''
+
+# ============================================================ vercel.json (security + cache)
+FILES["vercel.json"] = r'''{
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "functions": {
+    "api/*.js": { "includeFiles": "data/kb.json" }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    }
+  ]
+}
+'''
+
+FILES["robots.txt"] = "User-agent: *\nAllow: /\nDisallow: /api/\n"
+
+FILES[".gitattributes"] = "* text=auto eol=lf\n*.png binary\n*.ico binary\n"
+
+FILES[".gitignore"] = ".vercel\nnode_modules/\n.DS_Store\n*.log\n__pycache__/\n"
+
+
+def main():
+    for rel, content in FILES.items():
+        p = Path(rel); p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(content, encoding="utf-8", newline="\n")
+        print(f"  [ok] {rel}")
+    # sanity-check the KB that ships
+    kb = json.loads(Path("data/kb.json").read_text(encoding="utf-8"))
+    arts = [a for div in kb["schedule"].values() for a in div if a.get("p")]
+    print(f"\n[data check] sections={len(kb['sections'])} articles={len(arts)} "
+          f"faq={len(kb['faq'])} definitions={len(kb['definitions'])}")
+    print("sample dropdown item → Art", arts[0]["a"], "|", arts[0]["p"])
+    bad = [a["a"] for a in arts if not a.get("d") or not a.get("s")]
+    print("schema problems:", bad if bad else "none ✅")
+    print("\nNEXT → git add -A && git commit -m 'production hardening v2' && git push")
+
+if __name__ == "__main__":
+    main()
