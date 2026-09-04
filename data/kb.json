@@ -1,0 +1,2018 @@
+{
+ "kb_name": "Limitation_Act_1908_Bangladesh_KB",
+ "version": "1.0",
+ "source": "The Limitation Act, 1908 (Act No. IX of 1908), Laws of Bangladesh",
+ "metadata": {
+  "act_no": "IX of 1908",
+  "date": "7 August 1908",
+  "extent": "Whole of Bangladesh",
+  "commencement": "Section 1 and section 31 came into force at once; the rest on 1 January 1909",
+  "purpose": "Consolidate and amend law for limitation of suits, appeals and applications to Courts; provide rules for acquiring by possession the ownership of easements and other property.",
+  "objectives": [
+   "Promote timely justice: claims filed while evidence and witnesses are fresh",
+   "Prevent endless litigation: finality to legal disputes; stale claims barred",
+   "Protect defendants from being threatened with suits indefinitely",
+   "Encourage diligence in enforcing legal rights",
+   "Improve court efficiency: automatic dismissal of late cases under Section 3"
+  ],
+  "amendments": [
+   "Bangladesh Laws (Revision and Declaration) Act, 1973 (VIII of 1973): terminology substitutions; omitted Arts 1 and 45",
+   "Indian Limitation (Amendment) Act, 1929 (I of 1929): inserted Arts 48A, 48B, 134A, 134B, 134C",
+   "Indian Limitation (Amendment) Act, 1923: omitted Art 133",
+   "Repealing and Amending Act, 1937 (XX of 1937): omitted Art 4",
+   "Extinction of Discriminatory Privileges Act, 1949 (II of 1950): omitted Art 150A",
+   "Limitation (Amendment) Act, 1965 (XI of 1965): omitted Art 162A",
+   "Civil Procedure and Limitation (Amendment) Ordinance, 1961 (IX of 1961): inserted Art 64A",
+   "Limitation (Amendment) Act, 2004 (XXVIII of 2004), w.e.f. 01-07-2005: Arts 113 and 114 reduced to ONE year",
+   "Repealing and Amending Act, 1930: repealed sections 30-31 and Second/Third Schedules",
+   "Second Repealing and Amending Act, 1914: repealed section 32"
+  ]
+ },
+ "definitions": [
+  {
+   "term": "applicant",
+   "section": "2(1)",
+   "definition": "Includes any person from or through whom an applicant derives his right to apply."
+  },
+  {
+   "term": "bill of exchange",
+   "section": "2(2)",
+   "definition": "Includes a hundi and a cheque."
+  },
+  {
+   "term": "bond",
+   "section": "2(3)",
+   "definition": "Includes any instrument whereby a person obliges himself to pay money to another, on condition that the obligation shall be void if a specified act is performed, or is not performed, as the case may be."
+  },
+  {
+   "term": "defendant",
+   "section": "2(4)",
+   "definition": "Includes any person from or through whom a defendant derives his liability to be sued."
+  },
+  {
+   "term": "easement",
+   "section": "2(5)",
+   "definition": "Includes a right not arising from contract, by which one person is entitled to remove and appropriate for his own profit any part of the soil belonging to another, or anything growing in, attached to, or subsisting upon the land of another."
+  },
+  {
+   "term": "foreign country",
+   "section": "2(6)",
+   "definition": "Any country other than Bangladesh."
+  },
+  {
+   "term": "good faith",
+   "section": "2(7)",
+   "definition": "Nothing shall be deemed to be done in good faith which is not done with due care and attention."
+  },
+  {
+   "term": "plaintiff",
+   "section": "2(8)",
+   "definition": "Includes any person from or through whom a plaintiff derives his right to sue."
+  },
+  {
+   "term": "promissory note",
+   "section": "2(9)",
+   "definition": "Any instrument whereby the maker engages absolutely to pay a specified sum of money to another at a time therein limited, or on demand, or at sight."
+  },
+  {
+   "term": "suit",
+   "section": "2(10)",
+   "definition": "Does NOT include an appeal or application."
+  },
+  {
+   "term": "trustee",
+   "section": "2(11)",
+   "definition": "Does NOT include a benamidar, a mortgagee remaining in possession after the mortgage has been satisfied, or a wrong-doer in possession without title."
+  }
+ ],
+ "sections": [
+  {
+   "id": "1",
+   "part": "I - Preliminary",
+   "title": "Short title, extent and commencement",
+   "gist": "Act called Limitation Act, 1908; extends to whole of Bangladesh; s.1 & s.31 in force at once, rest from 1 January 1909.",
+   "key_points": []
+  },
+  {
+   "id": "2",
+   "part": "I - Preliminary",
+   "title": "Definitions",
+   "gist": "Defines applicant, bill of exchange, bond, defendant, easement, foreign country, good faith, plaintiff, promissory note, suit, trustee.",
+   "key_points": [
+    "'good faith' requires due care and attention",
+    "'suit' excludes appeals and applications",
+    "'trustee' excludes benamidar and satisfied mortgagee in possession"
+   ]
+  },
+  {
+   "id": "3",
+   "part": "II - Limitation of Suits, Appeals, Applications",
+   "title": "Dismissal of suits instituted after period of limitation",
+   "gist": "Every suit/appeal/application filed after the First Schedule period SHALL be dismissed, although limitation has not been set up as a defence.",
+   "key_points": [
+    "Subject to provisions of sections 4 to 25",
+    "Suit instituted when plaint presented to proper officer; for a pauper when leave application made; for company being wound up when claim sent to official liquidator"
+   ]
+  },
+  {
+   "id": "4",
+   "part": "II",
+   "title": "Where Court is closed when period expires",
+   "gist": "If limitation expires on a day the Court is closed, the suit/appeal/application may be filed on the day the Court re-opens.",
+   "key_points": []
+  },
+  {
+   "id": "5",
+   "part": "II",
+   "title": "Extension of period in certain cases",
+   "gist": "Appeals, revision/review applications and applications covered by enactment may be admitted after limitation on sufficient cause.",
+   "key_points": [
+    "Applicant must satisfy the Court of sufficient cause",
+    "Being misled by an order/practice/judgment of the High Court Division in computing limitation may be sufficient cause",
+    "Does NOT extend limitation for instituting a suit"
+   ]
+  },
+  {
+   "id": "6",
+   "part": "II",
+   "title": "Legal disability",
+   "gist": "If person entitled was minor, insane or idiot when period began, he may sue within the same period AFTER the disability ceases.",
+   "key_points": [
+    "Two disabilities: period runs after both cease",
+    "Disability continuing to death: legal representative gets same period after death",
+    "Representative under disability: sub-s.(1)/(2) apply"
+   ]
+  },
+  {
+   "id": "7",
+   "part": "II",
+   "title": "Disability of one of several plaintiffs/applicants",
+   "gist": "If discharge can be given without the disabled co-plaintiff's concurrence, time runs against all; otherwise time does not run against any until one can give discharge or disability ceases.",
+   "key_points": []
+  },
+  {
+   "id": "8",
+   "part": "II",
+   "title": "Special exceptions",
+   "gist": "Sections 6-7 do NOT apply to pre-emption suits; disability extension cannot exceed 3 years from cessation of disability or death.",
+   "key_points": []
+  },
+  {
+   "id": "9",
+   "part": "II",
+   "title": "Continuous running of time",
+   "gist": "Once time begins to run, no subsequent disability or inability to sue stops it.",
+   "key_points": [
+    "Proviso: where debtor obtains letters of administration of creditor's estate, time suspended while administration continues"
+   ]
+  },
+  {
+   "id": "10",
+   "part": "II",
+   "title": "Suits against express trustees and representatives",
+   "gist": "No suit against express trustee (or representatives/assigns not for value) to follow trust property/proceeds or for account is barred by any length of time.",
+   "key_points": [
+    "Hindu/Muslim/Buddhist religious or charitable endowment property deemed trust property; its manager deemed trustee"
+   ]
+  },
+  {
+   "id": "11",
+   "part": "II",
+   "title": "Suits on foreign contracts",
+   "gist": "Suits in Bangladesh on foreign contracts governed by THIS Act; foreign limitation a defence only if it extinguished the contract AND parties were domiciled there during that period.",
+   "key_points": []
+  },
+  {
+   "id": "12",
+   "part": "III - Computation",
+   "title": "Exclusion of time in legal proceedings",
+   "gist": "The day from which the period is reckoned is EXCLUDED.",
+   "key_points": [
+    "Appeals/leave/review: day judgment pronounced AND time to obtain copy of decree/sentence/order excluded",
+    "Appeal from/review of decree: time to obtain copy of judgment also excluded",
+    "Application to set aside award: time to obtain copy of award excluded"
+   ]
+  },
+  {
+   "id": "13",
+   "part": "III",
+   "title": "Defendant's absence from Bangladesh",
+   "gist": "Time during which the defendant was absent from Bangladesh and territories beyond under Government administration is excluded in computing limitation for suits.",
+   "key_points": []
+  },
+  {
+   "id": "14",
+   "part": "III",
+   "title": "Bona fide proceeding in Court without jurisdiction",
+   "gist": "Time prosecuting another civil proceeding with due diligence, in good faith, on the same cause of action, in a Court lacking jurisdiction, is excluded.",
+   "key_points": [
+    "Expl I: both first day and last day of former proceeding counted",
+    "Expl II: plaintiff/applicant resisting an appeal is 'prosecuting' a proceeding",
+    "Expl III: misjoinder of parties/causes of action deemed a defect like want of jurisdiction"
+   ]
+  },
+  {
+   "id": "15",
+   "part": "III",
+   "title": "Exclusion during suspension",
+   "gist": "Time of continuance of injunction/order staying institution or execution excluded (issue and withdrawal days both excluded); statutory notice period also excluded.",
+   "key_points": []
+  },
+  {
+   "id": "16",
+   "part": "III",
+   "title": "Proceedings to set aside execution-sale pending",
+   "gist": "For possession suit by purchaser at execution-sale, time during which a proceeding to set aside the sale was prosecuted is excluded.",
+   "key_points": []
+  },
+  {
+   "id": "17",
+   "part": "III",
+   "title": "Death before right to sue accrues",
+   "gist": "If the would-be plaintiff or defendant dies before the right accrues, limitation computed from when a capable legal representative exists.",
+   "key_points": [
+    "Not applicable to pre-emption suits or suits for possession of immovable property or hereditary office"
+   ]
+  },
+  {
+   "id": "18",
+   "part": "III",
+   "title": "Effect of fraud",
+   "gist": "Where fraud kept the plaintiff from knowledge of the right/title, or a necessary document was fraudulently concealed, time runs from when the fraud first became known (or when he first had means to produce the concealed document).",
+   "key_points": []
+  },
+  {
+   "id": "19",
+   "part": "III",
+   "title": "Acknowledgement in writing",
+   "gist": "Written acknowledgement of liability signed by the liable party (or title-deriver) before expiry of the period starts a FRESH period from signing.",
+   "key_points": [
+    "Undated writing: oral evidence of signing date allowed, not of contents",
+    "Sufficient even if it omits exact nature of right, avers time not yet come, includes refusal, set-off claim, or is addressed to another person",
+    "'Signed' includes duly authorised agent; execution application is an application in respect of a right"
+   ]
+  },
+  {
+   "id": "20",
+   "part": "III",
+   "title": "Payment on account of debt or interest on legacy",
+   "gist": "Part payment of debt/interest before expiry by the liable person or authorised agent starts a fresh period from payment.",
+   "key_points": [
+    "Proviso: acknowledgement of payment in payer's handwriting or signed writing required (except interest payments before 1-1-1928)",
+    "Mortgagee in possession: receipt of rent/produce deemed payment",
+    "'Debt' includes money payable under a decree or order of Court"
+   ]
+  },
+  {
+   "id": "21",
+   "part": "III",
+   "title": "Agent of persons under disability; joint contractors",
+   "gist": "For persons under disability 'duly authorised agent' includes lawful guardian/committee/manager or their agent.",
+   "key_points": [
+    "One joint contractor/partner/executor/mortgagee's acknowledgement or payment does NOT charge the others",
+    "Hindu widow/limited owner's acknowledgement valid against reversioner",
+    "HUF manager's acknowledgement/payment deemed made for whole family"
+   ]
+  },
+  {
+   "id": "22",
+   "part": "III",
+   "title": "Substituting or adding new plaintiff/defendant",
+   "gist": "Suit deemed instituted against/for a newly added party when he was made a party; does not apply to assignment/devolution during pendency or plaintiff-defendant swap.",
+   "key_points": []
+  },
+  {
+   "id": "23",
+   "part": "III",
+   "title": "Continuing breaches and wrongs",
+   "gist": "In continuing breach of contract or continuing wrong, a fresh period of limitation begins to run at every moment during which the breach/wrong continues.",
+   "key_points": []
+  },
+  {
+   "id": "24",
+   "part": "III",
+   "title": "Act not actionable without special damage",
+   "gist": "For compensation where a specific injury must result, limitation runs from the time the injury results.",
+   "key_points": []
+  },
+  {
+   "id": "25",
+   "part": "III",
+   "title": "Time mentioned in instruments",
+   "gist": "All instruments deemed made with reference to the Gregorian calendar.",
+   "key_points": []
+  },
+  {
+   "id": "26",
+   "part": "IV - Ownership by Possession",
+   "title": "Acquisition of right to easements",
+   "gist": "20 years' peaceable, open, as-of-right, uninterrupted enjoyment of light/air/way/watercourse/easement makes the right absolute and indefeasible.",
+   "key_points": [
+    "The 20-year period must end within 2 years before the suit",
+    "Against Government property: 60 years substituted for 20",
+    "Interruption only where actual discontinuance caused by another's obstruction, submitted/acquiesced in for 1 year after notice",
+    "Asking leave once during the period defeats the claim"
+   ]
+  },
+  {
+   "id": "27",
+   "part": "IV",
+   "title": "Exclusion in favour of reversioner of servient tenement",
+   "gist": "Enjoyment during a life interest or term over 3 years is excluded from the 20 years if, within 3 years after it ends, the reversioner resists the claim.",
+   "key_points": []
+  },
+  {
+   "id": "28",
+   "part": "IV",
+   "title": "Extinguishment of right to property",
+   "gist": "When the limitation period for a suit for possession of property ends, the person's RIGHT TO THE PROPERTY IS EXTINGUISHED.",
+   "key_points": []
+  },
+  {
+   "id": "29",
+   "part": "V - Savings and Repeals",
+   "title": "Savings",
+   "gist": "Nothing affects s.25 Contract Act 1872; special laws with different periods override the Schedule.",
+   "key_points": [
+    "For special-law periods: s.3 applies; ss.4, 9-18, 22 apply unless expressly excluded; remaining provisions do not apply",
+    "Act does NOT apply to suits under the Divorce Act",
+    "ss.26-27 and 'easement' definition do not apply where the Easements Act, 1882 extends"
+   ]
+  },
+  {
+   "id": "30-31",
+   "part": "V",
+   "title": "Repealed",
+   "gist": "Repealed by the Repealing and Amending Act, 1930 (VIII of 1930).",
+   "key_points": []
+  },
+  {
+   "id": "32",
+   "part": "V",
+   "title": "Repealed",
+   "gist": "Repealed by the Second Repealing and Amending Act, 1914 (XVII of 1914).",
+   "key_points": []
+  }
+ ],
+ "schedule": {
+  "division_1_suits": [
+   {
+    "a": "1",
+    "omitted": "Omitted by the Bangladesh Laws (Revision and Declaration) Act, 1973 (VIII of 1973), section 3 and 2nd Schedule."
+   },
+   {
+    "a": "2",
+    "d": "Compensation for doing or omitting an act alleged to be in pursuance of any enactment in force in Bangladesh",
+    "p": "90 days",
+    "pv": 90,
+    "pu": "days",
+    "s": "When the act or omission takes place"
+   },
+   {
+    "a": "3",
+    "d": "Under Specific Relief Act, 1877 s.9, to recover possession of immovable property",
+    "p": "6 months",
+    "pv": 6,
+    "pu": "months",
+    "s": "When the dispossession occurs"
+   },
+   {
+    "a": "4",
+    "omitted": "Omitted by the Repealing and Amending Act, 1937 (XX of 1937), section 3 and Second Schedule."
+   },
+   {
+    "a": "5",
+    "d": "Summary procedure under CPC s.128(2)(f) where ordinary procedure not excluded — debt or liquidated demand",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the debt or liquidated demand becomes payable or property becomes recoverable"
+   },
+   {
+    "a": "6",
+    "d": "Upon a Statute/Act/Regulation/Bye-law for penalty or forfeiture",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the penalty or forfeiture is incurred"
+   },
+   {
+    "a": "7",
+    "d": "Wages of a household servant, artisan or labourer",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the wages accrue due"
+   },
+   {
+    "a": "8",
+    "d": "Price of food or drink sold by keeper of hotel, tavern or lodging-house",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the food or drink is delivered"
+   },
+   {
+    "a": "9",
+    "d": "Price of lodging",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the price becomes payable"
+   },
+   {
+    "a": "10",
+    "d": "To enforce right of pre-emption (law, general usage or special contract)",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When purchaser takes physical possession of whole property sold, or where physical possession impossible, when instrument of sale is registered"
+   },
+   {
+    "a": "11",
+    "d": "Against whom order made (CPC claim/objection to attachment in execution) — establish right to property in the order",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "The date of the order"
+   },
+   {
+    "a": "11A",
+    "d": "Against whom order made under CPC on complaint of resistance/obstruction to possession or dispossession — establish right to present possession",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "The date of the order"
+   },
+   {
+    "a": "12",
+    "d": "To set aside sale in execution of Civil Court decree; sale under Collector/revenue decree or order; sale for Government revenue arrears; sale of patni taluq for current rent arrears",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the sale is confirmed, or would otherwise have become final and conclusive"
+   },
+   {
+    "a": "13",
+    "d": "To alter or set aside a decision or order of a Civil Court in any proceeding other than a suit",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date of the final decision or order by a Court competent to determine it finally"
+   },
+   {
+    "a": "14",
+    "d": "To set aside act or order of a Government officer in official capacity, not otherwise provided",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "The date of the act or order"
+   },
+   {
+    "a": "15",
+    "d": "Against Government to set aside attachment, lease or transfer of immovable property by revenue authorities for revenue arrears",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the attachment, lease or transfer is made"
+   },
+   {
+    "a": "16",
+    "d": "Against Government to recover money paid under protest to revenue authorities",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the payment is made"
+   },
+   {
+    "a": "17",
+    "d": "Against Government for compensation for land acquired for public purposes",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date of determining the amount of compensation"
+   },
+   {
+    "a": "18",
+    "d": "Like suit for compensation when acquisition not completed",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date of the refusal to complete"
+   },
+   {
+    "a": "19",
+    "d": "Compensation for false imprisonment",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the imprisonment ends"
+   },
+   {
+    "a": "20",
+    "d": "By executors/administrators/representatives under Legal Representatives' Suits Act, 1855",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date of death of the person wronged"
+   },
+   {
+    "a": "21",
+    "d": "By executors/administrators/representatives under Fatal Accidents Act, 1855",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date of death of the person killed"
+   },
+   {
+    "a": "22",
+    "d": "Compensation for any other injury to the person",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the injury is committed"
+   },
+   {
+    "a": "23",
+    "d": "Compensation for malicious prosecution",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When plaintiff is acquitted or prosecution otherwise terminated"
+   },
+   {
+    "a": "24",
+    "d": "Compensation for libel",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the libel is published"
+   },
+   {
+    "a": "25",
+    "d": "Compensation for slander",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When words spoken, or if not actionable in themselves, when the special damage results"
+   },
+   {
+    "a": "26",
+    "d": "Compensation for loss of service by seduction of plaintiff's servant or daughter",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the loss occurs"
+   },
+   {
+    "a": "27",
+    "d": "Compensation for inducing a person to break a contract with plaintiff",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date of the breach"
+   },
+   {
+    "a": "28",
+    "d": "Compensation for illegal, irregular or excessive distress",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date of the distress"
+   },
+   {
+    "a": "29",
+    "d": "Compensation for wrongful seizure of movable property under legal process",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date of the seizure"
+   },
+   {
+    "a": "30",
+    "d": "Against carrier for losing or injuring goods",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the loss or injury occurs"
+   },
+   {
+    "a": "31",
+    "d": "Against carrier for non-delivery of, or delay in delivering, goods",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When the goods ought to be delivered"
+   },
+   {
+    "a": "32",
+    "d": "Against one having right to use property for specific purposes who perverts it to other purposes",
+    "p": "2 years",
+    "pv": 2,
+    "pu": "years",
+    "s": "When the perversion first becomes known to the person injured"
+   },
+   {
+    "a": "33",
+    "d": "Under Legal Representatives' Suits Act, 1855, against an executor",
+    "p": "2 years",
+    "pv": 2,
+    "pu": "years",
+    "s": "When the wrong complained of is done"
+   },
+   {
+    "a": "34",
+    "d": "Under same Act against an administrator",
+    "p": "2 years",
+    "pv": 2,
+    "pu": "years",
+    "s": "When the wrong complained of is done"
+   },
+   {
+    "a": "35",
+    "d": "Under same Act against any other representative",
+    "p": "2 years",
+    "pv": 2,
+    "pu": "years",
+    "s": "When the wrong complained of is done"
+   },
+   {
+    "a": "36",
+    "d": "Compensation for malfeasance, misfeasance or non-feasance independent of contract, not specially provided for",
+    "p": "2 years",
+    "pv": 2,
+    "pu": "years",
+    "s": "When the malfeasance, misfeasance or non-feasance takes place"
+   },
+   {
+    "a": "37",
+    "d": "Compensation for obstructing a way or watercourse",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the obstruction"
+   },
+   {
+    "a": "38",
+    "d": "Compensation for diverting a watercourse",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the diversion"
+   },
+   {
+    "a": "39",
+    "d": "Compensation for trespass upon immovable property",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the trespass"
+   },
+   {
+    "a": "40",
+    "d": "Compensation for infringing copyright or other exclusive privilege",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the infringement"
+   },
+   {
+    "a": "41",
+    "d": "To restrain waste",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the waste begins"
+   },
+   {
+    "a": "42",
+    "d": "Compensation for injury caused by an injunction wrongfully obtained",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the injunction ceases"
+   },
+   {
+    "a": "43",
+    "d": "Under Succession Act, 1925 ss.360/361 to compel refund of legacy/assets distributed",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the payment or distribution"
+   },
+   {
+    "a": "44",
+    "d": "By ward who attained majority to set aside transfer of property by guardian",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the ward attains majority"
+   },
+   {
+    "a": "45",
+    "omitted": "Omitted by the Bangladesh Laws (Revision and Declaration) Act, 1973 (VIII of 1973)."
+   },
+   {
+    "a": "46",
+    "d": "By party bound by award to recover property comprised therein",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the final award or order in the case"
+   },
+   {
+    "a": "47",
+    "d": "By person bound by order respecting possession of immovable property under CrPC, 1898, or claimant under him, to recover the property",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the final order in the case"
+   },
+   {
+    "a": "48",
+    "d": "Specific movable property lost, or acquired by theft, dishonest misappropriation or conversion; or compensation for wrongfully taking/detaining it",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When person having right to possession first learns in whose possession it is"
+   },
+   {
+    "a": "48A",
+    "d": "To recover movable property conveyed/bequeathed in trust, deposited or pawned, afterwards bought from trustee/depositary/pawnee for value",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the sale becomes known to the plaintiff",
+    "note": "Inserted by Indian Limitation (Amendment) Act, 1929 (I of 1929)"
+   },
+   {
+    "a": "48B",
+    "d": "To set aside sale of movable property of a Hindu/Muslim/Buddhist religious or charitable endowment made by its manager for value",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the sale becomes known to the plaintiff",
+    "note": "Inserted by Indian Limitation (Amendment) Act, 1929"
+   },
+   {
+    "a": "49",
+    "d": "Other specific movable property, or compensation for wrongfully taking/injuring/detaining it",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When property wrongfully taken or injured, or detainer's possession becomes unlawful"
+   },
+   {
+    "a": "50",
+    "d": "Hire of animals, vehicles, boats or household furniture",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the hire becomes payable"
+   },
+   {
+    "a": "51",
+    "d": "Balance of money advanced in payment of goods to be delivered",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the goods ought to be delivered"
+   },
+   {
+    "a": "52",
+    "d": "Price of goods sold and delivered, no fixed period of credit agreed",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the delivery of the goods"
+   },
+   {
+    "a": "53",
+    "d": "Price of goods sold and delivered payable after fixed period of credit",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the period of credit expires"
+   },
+   {
+    "a": "54",
+    "d": "Price of goods sold and delivered to be paid by a bill of exchange, no such bill given",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the period of the proposed bill elapses"
+   },
+   {
+    "a": "55",
+    "d": "Price of trees or growing crops sold by plaintiff, no fixed credit period",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the sale"
+   },
+   {
+    "a": "56",
+    "d": "Price of work done by plaintiff at defendant's request, no time fixed for payment",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the work is done"
+   },
+   {
+    "a": "57",
+    "d": "Money payable for money lent",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the loan is made"
+   },
+   {
+    "a": "58",
+    "d": "Like suit when lender has given a cheque for the money",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the cheque is paid"
+   },
+   {
+    "a": "59",
+    "d": "Money lent payable on demand",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the loan is made"
+   },
+   {
+    "a": "60",
+    "d": "Money deposited payable on demand, including customer's money in banker's hands so payable",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the demand is made"
+   },
+   {
+    "a": "61",
+    "d": "Money payable to plaintiff for money paid for the defendant",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the money is paid"
+   },
+   {
+    "a": "62",
+    "d": "Money payable by defendant for money received by him for plaintiff's use",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the money is received"
+   },
+   {
+    "a": "63",
+    "d": "Money payable for interest upon money due from defendant to plaintiff",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the interest becomes due"
+   },
+   {
+    "a": "64",
+    "d": "Money due on accounts stated between the parties",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When accounts stated in writing signed by defendant or authorised agent, unless simultaneous agreement made debt payable at future time, then when that time arrives"
+   },
+   {
+    "a": "64A",
+    "d": "Under Order XXXVII of the Code of Civil Procedure, 1908 (summary suit)",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the debt becomes payable",
+    "note": "Inserted by Civil Procedure and Limitation (Amendment) Ordinance, 1961"
+   },
+   {
+    "a": "65",
+    "d": "Compensation for breach of promise to do anything at specified time or upon specified contingency",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the time specified arrives or the contingency happens"
+   },
+   {
+    "a": "66",
+    "d": "On a single bond, day specified for payment",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "The day so specified"
+   },
+   {
+    "a": "67",
+    "d": "On a single bond, no day specified",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of executing the bond"
+   },
+   {
+    "a": "68",
+    "d": "On a bond subject to a condition",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the condition is broken"
+   },
+   {
+    "a": "69",
+    "d": "On bill of exchange or promissory note payable at fixed time after date",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the bill or note falls due"
+   },
+   {
+    "a": "70",
+    "d": "On bill of exchange payable at sight or after sight, not at fixed time",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the bill is presented"
+   },
+   {
+    "a": "71",
+    "d": "On accepted bill of exchange payable at a particular place",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the bill is presented at that place"
+   },
+   {
+    "a": "72",
+    "d": "On bill or note payable at fixed time after sight or after demand",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the fixed time expires"
+   },
+   {
+    "a": "73",
+    "d": "On bill or note payable on demand, not accompanied by writing restraining or postponing right to sue",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the bill or note"
+   },
+   {
+    "a": "74",
+    "d": "On promissory note or bond payable by instalments",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Expiration of first term of payment as to that part; for other parts, expiration of the respective terms"
+   },
+   {
+    "a": "75",
+    "d": "On note or bond by instalments with default-acceleration clause (whole becomes due)",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the default is made, unless benefit waived, then on fresh default without waiver"
+   },
+   {
+    "a": "76",
+    "d": "On promissory note given by maker to third person to deliver to payee after a certain event",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the delivery to the payee"
+   },
+   {
+    "a": "77",
+    "d": "On a dishonoured foreign bill where protest made and notice given",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the notice is given"
+   },
+   {
+    "a": "78",
+    "d": "By payee against drawer of bill dishonoured by non-acceptance",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the refusal to accept"
+   },
+   {
+    "a": "79",
+    "d": "By acceptor of an accommodation bill against the drawer",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the acceptor pays the amount of the bill"
+   },
+   {
+    "a": "80",
+    "d": "Suit on a bill of exchange, promissory note or bond not expressly provided for",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the bill, note or bond becomes payable"
+   },
+   {
+    "a": "81",
+    "d": "By a surety against the principal debtor",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the surety pays the creditor"
+   },
+   {
+    "a": "82",
+    "d": "By a surety against a co-surety",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the surety pays anything in excess of his own share"
+   },
+   {
+    "a": "83",
+    "d": "Upon any other contract to indemnify",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the plaintiff is actually damnified"
+   },
+   {
+    "a": "84",
+    "d": "By an advocate for costs of a suit or business, no express agreement on payment time",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of termination of the suit or business, or of proper discontinuance"
+   },
+   {
+    "a": "85",
+    "d": "Balance due on a mutual, open and current account with reciprocal demands",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Close of the year in which the last item admitted or proved is entered in the account"
+   },
+   {
+    "a": "86(a)",
+    "d": "On policy of insurance, sum payable after proof of death given to/received by insurers",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the death of the deceased"
+   },
+   {
+    "a": "86(b)",
+    "d": "On policy of insurance, sum payable after proof of loss given to/received by insurers",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the occurrence causing the loss"
+   },
+   {
+    "a": "87",
+    "d": "By assured to recover premia paid under a policy voidable at insurers' election",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the insurers elect to avoid the policy"
+   },
+   {
+    "a": "88",
+    "d": "Against a factor for an account",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When account demanded and refused during agency, or if no demand, when agency terminates"
+   },
+   {
+    "a": "89",
+    "d": "By principal against agent for movable property received and not accounted for",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When account demanded and refused, or agency terminates"
+   },
+   {
+    "a": "90",
+    "d": "Other suits by principals against agents for neglect or misconduct",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the neglect or misconduct becomes known to the plaintiff"
+   },
+   {
+    "a": "91",
+    "d": "To cancel or set aside an instrument not otherwise provided for",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the facts entitling plaintiff become known to him"
+   },
+   {
+    "a": "92",
+    "d": "To declare forgery of an instrument issued or registered",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the issue or registration becomes known to plaintiff"
+   },
+   {
+    "a": "93",
+    "d": "To declare forgery of an instrument attempted to be enforced against plaintiff",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the attempt"
+   },
+   {
+    "a": "94",
+    "d": "For property which plaintiff conveyed while insane",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When plaintiff restored to sanity and has knowledge of the conveyance"
+   },
+   {
+    "a": "95",
+    "d": "To set aside a decree obtained by fraud, or other relief on ground of fraud",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the fraud becomes known to the party wronged"
+   },
+   {
+    "a": "96",
+    "d": "For relief on the ground of mistake",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the mistake becomes known to the plaintiff"
+   },
+   {
+    "a": "97",
+    "d": "For money paid upon an existing consideration which afterwards fails",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the failure"
+   },
+   {
+    "a": "98",
+    "d": "To make good from deceased trustee's general estate the loss occasioned by breach of trust",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of trustee's death, or if loss not then resulted, date of the loss"
+   },
+   {
+    "a": "99",
+    "d": "Contribution by party paying whole/more than his share under joint decree, or sharer paying more than his share of revenue",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the payment in excess of plaintiff's own share"
+   },
+   {
+    "a": "100",
+    "d": "By co-trustee to enforce against deceased trustee's estate a claim for contribution",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the right to contribution accrues"
+   },
+   {
+    "a": "101",
+    "d": "For a seaman's wages",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "End of the voyage during which the wages are earned"
+   },
+   {
+    "a": "102",
+    "d": "For wages not otherwise expressly provided for by the Schedule",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the wages accrue due"
+   },
+   {
+    "a": "103",
+    "d": "By a Muslim for exigible dower (mu'ajjal)",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When dower demanded and refused, or (no demand during marriage) when marriage dissolved by death or divorce"
+   },
+   {
+    "a": "104",
+    "d": "By a Muslim for deferred dower (mu'wajjal)",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the marriage is dissolved by death or divorce"
+   },
+   {
+    "a": "105",
+    "d": "By mortgagor after mortgage satisfied, to recover surplus collections received by mortgagee",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the mortgagor re-enters on the mortgaged property"
+   },
+   {
+    "a": "106",
+    "d": "For account and share of profits of a dissolved partnership",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the dissolution"
+   },
+   {
+    "a": "107",
+    "d": "By manager of joint estate of undivided family for contribution in respect of payment made for the estate",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of the payment"
+   },
+   {
+    "a": "108",
+    "d": "By lessor for value of trees cut down by lessee contrary to lease terms",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the trees are cut down"
+   },
+   {
+    "a": "109",
+    "d": "For profits of plaintiff's immovable property wrongfully received by defendant",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the profits are received"
+   },
+   {
+    "a": "110",
+    "d": "For arrears of rent",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the arrears become due"
+   },
+   {
+    "a": "111",
+    "d": "By vendor of immovable property for personal payment of unpaid purchase-money",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "Time fixed for completing the sale, or (title accepted after that time) date of the acceptance"
+   },
+   {
+    "a": "112",
+    "d": "For a call by a company registered under any Statute or Act",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the call is payable"
+   },
+   {
+    "a": "113",
+    "d": "For specific performance of a contract",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "Date fixed for performance, or if none, when plaintiff has notice that performance is refused",
+    "note": "Changed from 3 years by Limitation (Amendment) Act, 2004 (XXVIII of 2004), w.e.f. 01-07-2005"
+   },
+   {
+    "a": "114",
+    "d": "For the rescission of a contract",
+    "p": "1 year",
+    "pv": 1,
+    "pu": "years",
+    "s": "When facts entitling plaintiff to rescind first become known to him",
+    "note": "Changed from 3 years by Limitation (Amendment) Act, 2004, w.e.f. 01-07-2005"
+   },
+   {
+    "a": "115",
+    "d": "Compensation for breach of any contract, express or implied, not in writing registered and not specially provided for",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When contract broken, or (successive breaches) when the breach sued on occurs, or (continuing breach) when it ceases"
+   },
+   {
+    "a": "116",
+    "d": "Compensation for breach of a contract in writing registered",
+    "p": "6 years",
+    "pv": 6,
+    "pu": "years",
+    "s": "When the period would begin to run against a suit on a similar contract not registered"
+   },
+   {
+    "a": "117",
+    "d": "Upon a foreign judgment as defined in CPC, 1908",
+    "p": "6 years",
+    "pv": 6,
+    "pu": "years",
+    "s": "Date of the judgment"
+   },
+   {
+    "a": "118",
+    "d": "To obtain declaration that an alleged adoption is invalid or never took place",
+    "p": "6 years",
+    "pv": 6,
+    "pu": "years",
+    "s": "When the alleged adoption becomes known to plaintiff"
+   },
+   {
+    "a": "119",
+    "d": "To obtain declaration that an adoption is valid",
+    "p": "6 years",
+    "pv": 6,
+    "pu": "years",
+    "s": "When the rights of the adopted son are interfered with"
+   },
+   {
+    "a": "120",
+    "d": "Suit for which no period of limitation is provided elsewhere in this Schedule",
+    "p": "6 years",
+    "pv": 6,
+    "pu": "years",
+    "s": "When the right to sue accrues",
+    "note": "RESIDUARY article for suits"
+   },
+   {
+    "a": "121",
+    "d": "To avoid incumbrances or under-tenures in estate sold for revenue arrears, or in patni taluq or saleable tenure sold for rent arrears",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the sale becomes final and conclusive"
+   },
+   {
+    "a": "122",
+    "d": "Upon a judgment obtained in Bangladesh or a recognisance",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "Date of the judgment or recognisance"
+   },
+   {
+    "a": "123",
+    "d": "For a legacy, share of residue bequeathed by testator, or distributive share of intestate's property",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the legacy or share becomes payable or deliverable"
+   },
+   {
+    "a": "124",
+    "d": "For possession of a hereditary office",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When defendant takes possession of the office adversely to plaintiff",
+    "note": "Office 'possessed' when profits usually received, or if none, duties usually performed"
+   },
+   {
+    "a": "125",
+    "d": "Suit during life of Hindu/Muslim female to declare her alienation of land void except for her life or until re-marriage",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "Date of the alienation"
+   },
+   {
+    "a": "126",
+    "d": "By Hindu governed by Mitakshara to set aside father's alienation of ancestral property",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the alienee takes possession of the property"
+   },
+   {
+    "a": "127",
+    "d": "By person excluded from joint family property to enforce right to share therein",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the exclusion becomes known to plaintiff"
+   },
+   {
+    "a": "128",
+    "d": "By a Hindu for arrears of maintenance",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the arrears are payable"
+   },
+   {
+    "a": "129",
+    "d": "By a Hindu for declaration of his right to maintenance",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the right is denied"
+   },
+   {
+    "a": "130",
+    "d": "For resumption or assessment of rent-free land",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the right to resume or assess the land first accrues"
+   },
+   {
+    "a": "131",
+    "d": "To establish a periodically recurring right",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When plaintiff first refused the enjoyment of the right"
+   },
+   {
+    "a": "132",
+    "d": "To enforce payment of money charged upon immovable property",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the money sued for becomes due",
+    "note": "Includes malikana, haqqs, produce secured by charge, advances secured by mortgage by deposit of title-deeds"
+   },
+   {
+    "a": "133",
+    "omitted": "Omitted by the Indian Limitation (Amendment) Act, 1923 (I of 1923), section 3."
+   },
+   {
+    "a": "134",
+    "d": "To recover possession of immovable property conveyed/bequeathed in trust or mortgaged and afterwards transferred by trustee/mortgagee for value",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the transfer becomes known to plaintiff"
+   },
+   {
+    "a": "134A",
+    "d": "To set aside transfer of immovable property of Hindu/Muslim/Buddhist endowment made by manager for value",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the transfer becomes known to plaintiff",
+    "note": "Inserted by Indian Limitation (Amendment) Act, 1929"
+   },
+   {
+    "a": "134B",
+    "d": "By manager of such endowment to recover possession of immovable endowment property transferred by previous manager for value",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "Death, resignation or removal of the transferor",
+    "note": "Inserted by Indian Limitation (Amendment) Act, 1929"
+   },
+   {
+    "a": "134C",
+    "d": "By manager of such endowment to recover possession of movable endowment property sold by previous manager for value",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "Death, resignation or removal of the seller",
+    "note": "Inserted by Indian Limitation (Amendment) Act, 1929"
+   },
+   {
+    "a": "135",
+    "d": "Suit in a Court other than the High Court Division by mortgagee for possession of mortgaged immovable property",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the mortgagor's right to possession determines"
+   },
+   {
+    "a": "136",
+    "d": "By purchaser at private sale for possession, vendor out of possession at date of sale",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the vendor is first entitled to possession"
+   },
+   {
+    "a": "137",
+    "d": "Like suit by purchaser at execution sale, judgment-debtor out of possession at sale date",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the judgment-debtor is first entitled to possession"
+   },
+   {
+    "a": "138",
+    "d": "Like suit by purchaser at execution sale, judgment-debtor in possession at sale date",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "Date when the sale becomes absolute"
+   },
+   {
+    "a": "139",
+    "d": "By a landlord to recover possession from a tenant",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the tenancy is determined"
+   },
+   {
+    "a": "140",
+    "d": "By remainder man, reversioner (other than landlord) or devisee for possession of immovable property",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When his estate falls into possession"
+   },
+   {
+    "a": "141",
+    "d": "Like suit by Hindu/Muslim entitled to possession of immovable property on death of a Hindu/Muslim female",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the female dies"
+   },
+   {
+    "a": "142",
+    "d": "For possession of immovable property when plaintiff, while in possession, was dispossessed or discontinued possession",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "Date of the dispossession or discontinuance"
+   },
+   {
+    "a": "143",
+    "d": "Like suit when plaintiff entitled by reason of forfeiture or breach of condition",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the forfeiture is incurred or the condition is broken"
+   },
+   {
+    "a": "144",
+    "d": "For possession of immovable property or interest therein not otherwise specially provided for",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When the possession of the defendant becomes adverse to the plaintiff",
+    "note": "RESIDUARY article for property possession"
+   },
+   {
+    "a": "145",
+    "d": "Against depositary or pawnee to recover movable property deposited or pawned",
+    "p": "30 years",
+    "pv": 30,
+    "pu": "years",
+    "s": "Date of the deposit or pawn"
+   },
+   {
+    "a": "146",
+    "d": "Before High Court Division (ordinary original civil jurisdiction) by mortgagee for possession of mortgaged immovable property",
+    "p": "30 years",
+    "pv": 30,
+    "pu": "years",
+    "s": "When any part of the principal or interest was last paid on account of the mortgage-debt"
+   },
+   {
+    "a": "146A",
+    "d": "By or on behalf of a local authority for possession of public street or road from which dispossessed or possession discontinued",
+    "p": "30 years",
+    "pv": 30,
+    "pu": "years",
+    "s": "Date of the dispossession or discontinuance"
+   },
+   {
+    "a": "147",
+    "d": "By a mortgagee for foreclosure or sale",
+    "p": "60 years",
+    "pv": 60,
+    "pu": "years",
+    "s": "When the money secured by the mortgage becomes due"
+   },
+   {
+    "a": "148",
+    "d": "Against a mortgagee to redeem or recover possession of mortgaged immovable property",
+    "p": "60 years",
+    "pv": 60,
+    "pu": "years",
+    "s": "When the right to redeem or recover possession accrues"
+   },
+   {
+    "a": "149",
+    "d": "Any suit by or on behalf of the Government, except before the Appellate Division in original jurisdiction",
+    "p": "60 years",
+    "pv": 60,
+    "pu": "years",
+    "s": "When the period would begin to run under this Act against a like suit by a private person"
+   }
+  ],
+  "division_2_appeals": [
+   {
+    "a": "150",
+    "d": "Under CrPC, 1898, from sentence of death by Court of Session or High Court Division (original criminal jurisdiction)",
+    "p": "7 days",
+    "pv": 7,
+    "pu": "days",
+    "s": "Date of the sentence"
+   },
+   {
+    "a": "150A",
+    "omitted": "Omitted by the Extinction of Discriminatory Privileges Act, 1949 (II of 1950), section 2."
+   },
+   {
+    "a": "151",
+    "d": "From a decree or order of the High Court Division in exercise of its original jurisdiction",
+    "p": "20 days",
+    "pv": 20,
+    "pu": "days",
+    "s": "Date of the decree or order"
+   },
+   {
+    "a": "152",
+    "d": "Under CPC, 1908, to the Court of a District Judge",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the decree or order appealed from"
+   },
+   {
+    "a": "153",
+    "d": "Under CPC to the High Court Division from subordinate Court order refusing leave to appeal to the Appellate Division",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the order"
+   },
+   {
+    "a": "154",
+    "d": "Under CrPC, 1898, to any Court other than the High Court Division",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the sentence or order appealed from"
+   },
+   {
+    "a": "155",
+    "d": "Under CrPC to the High Court Division, except cases under Arts 150 and 157",
+    "p": "60 days",
+    "pv": 60,
+    "pu": "days",
+    "s": "Date of the sentence or order appealed from"
+   },
+   {
+    "a": "156",
+    "d": "Under CPC, 1908, to the High Court Division, except cases under Arts 151 and 153",
+    "p": "90 days",
+    "pv": 90,
+    "pu": "days",
+    "s": "Date of the decree or order appealed from"
+   },
+   {
+    "a": "157",
+    "d": "Under CrPC, 1898, from an order of acquittal",
+    "p": "6 months",
+    "pv": 6,
+    "pu": "months",
+    "s": "Date of the order appealed from"
+   }
+  ],
+  "division_3_applications": [
+   {
+    "a": "158",
+    "d": "Under Arbitration Act, 1940, to set aside an award or get it remitted for reconsideration",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of service of the notice of filing of the award"
+   },
+   {
+    "a": "159",
+    "d": "For leave to appear and defend a summary suit (CPC s.128(2)(f) or Order XXXVII)",
+    "p": "10 days",
+    "pv": 10,
+    "pu": "days",
+    "s": "When the summons is served"
+   },
+   {
+    "a": "160",
+    "d": "To restore to file an application for review rejected for failure to appear at hearing",
+    "p": "15 days",
+    "pv": 15,
+    "pu": "days",
+    "s": "When the application for review is rejected"
+   },
+   {
+    "a": "161",
+    "d": "For review of judgment by Court of Small Causes (or Court exercising that jurisdiction)",
+    "p": "15 days",
+    "pv": 15,
+    "pu": "days",
+    "s": "Date of the decree or order"
+   },
+   {
+    "a": "162",
+    "d": "For review of judgment by High Court Division in original jurisdiction",
+    "p": "20 days",
+    "pv": 20,
+    "pu": "days",
+    "s": "Date of the decree or order"
+   },
+   {
+    "a": "162A",
+    "omitted": "Omitted by the Limitation (Amendment) Act, 1965 (XI of 1965)."
+   },
+   {
+    "a": "163",
+    "d": "By plaintiff to set aside dismissal for default of appearance or failure to pay costs/security",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the dismissal"
+   },
+   {
+    "a": "164",
+    "d": "By defendant to set aside a decree passed ex parte",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the decree, or (summons not duly served) when applicant has knowledge of the decree"
+   },
+   {
+    "a": "165",
+    "d": "By person dispossessed of immovable property disputing right of decree-holder/execution-purchaser to possession",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the dispossession"
+   },
+   {
+    "a": "166",
+    "d": "Under CPC to set aside a sale in execution of a decree, including by judgment-debtor",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the sale"
+   },
+   {
+    "a": "167",
+    "d": "Complaining of resistance or obstruction to delivery of possession of immovable property decreed or sold in execution",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the resistance or obstruction"
+   },
+   {
+    "a": "168",
+    "d": "For readmission of an appeal dismissed for want of prosecution",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the dismissal"
+   },
+   {
+    "a": "169",
+    "d": "For re-hearing of an appeal heard ex parte",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the decree in appeal, or (notice not duly served) when applicant has knowledge"
+   },
+   {
+    "a": "170",
+    "d": "For leave to appeal as a pauper",
+    "p": "30 days",
+    "pv": 30,
+    "pu": "days",
+    "s": "Date of the decree appealed from"
+   },
+   {
+    "a": "171",
+    "d": "Under CPC for an order to set aside an abatement",
+    "p": "60 days",
+    "pv": 60,
+    "pu": "days",
+    "s": "Date of the abatement"
+   },
+   {
+    "a": "172",
+    "d": "By assignee/receiver of insolvent plaintiff or appellant to set aside dismissal of suit or appeal",
+    "p": "60 days",
+    "pv": 60,
+    "pu": "days",
+    "s": "Date of the order of dismissal"
+   },
+   {
+    "a": "173",
+    "d": "For review of judgment except in cases under Arts 161 and 162",
+    "p": "90 days",
+    "pv": 90,
+    "pu": "days",
+    "s": "Date of the decree or order"
+   },
+   {
+    "a": "174",
+    "d": "For notice to show cause why payment made out of Court/adjustment of decree should not be recorded as certified",
+    "p": "90 days",
+    "pv": 90,
+    "pu": "days",
+    "s": "When the payment or adjustment is made"
+   },
+   {
+    "a": "175",
+    "d": "For payment of the amount of a decree by instalments",
+    "p": "6 months",
+    "pv": 6,
+    "pu": "months",
+    "s": "Date of the decree"
+   },
+   {
+    "a": "176",
+    "d": "Under CPC to have legal representative of deceased plaintiff or appellant made a party",
+    "p": "90 days",
+    "pv": 90,
+    "pu": "days",
+    "s": "Date of the death of the deceased plaintiff or appellant"
+   },
+   {
+    "a": "177",
+    "d": "Under CPC to have legal representative of deceased defendant or respondent made a party",
+    "p": "90 days",
+    "pv": 90,
+    "pu": "days",
+    "s": "Date of the death of the deceased defendant or respondent"
+   },
+   {
+    "a": "178",
+    "d": "Under Arbitration Act, 1940, for filing in Court of an award",
+    "p": "90 days",
+    "pv": 90,
+    "pu": "days",
+    "s": "Date of service of the notice of making of the award"
+   },
+   {
+    "a": "179",
+    "d": "By person desiring to appeal under CPC to the Appellate Division for leave to appeal",
+    "p": "90 days",
+    "pv": 90,
+    "pu": "days",
+    "s": "Date of the decree appealed from"
+   },
+   {
+    "a": "180",
+    "d": "By purchaser of immovable property at execution sale for delivery of possession",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the sale becomes absolute"
+   },
+   {
+    "a": "181",
+    "d": "Applications for which no period is provided elsewhere in the Schedule or by s.48 CPC, 1908",
+    "p": "3 years",
+    "pv": 3,
+    "pu": "years",
+    "s": "When the right to apply accrues",
+    "note": "RESIDUARY article for applications"
+   },
+   {
+    "a": "182",
+    "d": "For execution of a decree or order of any Civil Court (other than s.48 CPC applications and Art 183)",
+    "p": "3 years; or 6 years where a certified copy registered",
+    "pv": 3,
+    "pu": "years",
+    "s": "Date of decree/order; or final appellate/review/amended decree; or prior execution step; or due date of payment enforced",
+    "note": "Expl I: several decrees - application effective only for makers; joint decrees - effective for all. Expl II: 'proper Court' = Court whose duty is to execute"
+   },
+   {
+    "a": "183",
+    "d": "To enforce a judgment, decree or order of the High Court Division (ordinary original civil jurisdiction) or an order of the Appellate Division",
+    "p": "12 years",
+    "pv": 12,
+    "pu": "years",
+    "s": "When a present right to enforce accrues to some person capable of releasing the rights",
+    "note": "Proviso: computation restarts from latest revivor, part payment of principal/interest, or written acknowledgement signed by the liable person or agent"
+   }
+  ]
+ },
+ "cheat_sheet": [
+  "7 days: Appeal against death sentence (Art 150)",
+  "10 days: Leave to defend summary suit (Art 159)",
+  "15-20 days: Small Cause review (161), restore review (160), HCD original appeal (151), HCD original review (162)",
+  "30 days: Most execution/interim applications (163-170), appeal to District Judge (152), CrPC other courts (154), set aside award (158)",
+  "60 days: CrPC appeal to HCD (155), set aside abatement (171), insolvent assignee application (172)",
+  "90 days: Civil appeal to HCD (156), other reviews (173), legal representative applications (176-177), arbitration award filing (178), leave to appeal to Appellate Division (179)",
+  "6 months: Appeal from acquittal (157), decree instalments (175), SRA s.9 possession (Art 3)",
+  "1 year: Injury/defamation/penalty/wages/pre-emption torts (Arts 5-31); specific performance (113) and rescission (114) as amended 2004",
+  "2 years: Misfeasance/executor claims (Arts 32-36)",
+  "3 years: Money claims, contracts (unregistered), movable property, negotiable instruments, dower, rent arrears, indemnity, surety (Arts 37-115)",
+  "6 years: Breach of registered written contract (116), foreign judgment (117), RESIDUARY suits (120)",
+  "12 years: Possession of immovable property (142-144), judgments/recognisances (122), legacies (123), hereditary office (124), enforcement of HCD/AD orders (183)",
+  "30 years: Deposits and pawns (145), HCD mortgagee possession (146), local authority streets (146A)",
+  "60 years: Mortgagee foreclosure/sale (147), redemption (148), Government suits (149)"
+ ],
+ "faq": [
+  {
+   "q": "What is the purpose of the Limitation Act, 1908?",
+   "a": "To set strict time limits for filing civil suits, appeals and applications, and to provide rules for acquiring ownership by long-term possession. It promotes timely justice (fresh evidence), prevents endless litigation and stale claims, protects defendants from indefinite threat of suits, encourages diligence, and improves court efficiency - late cases are dismissed automatically under Section 3."
+  },
+  {
+   "q": "Is limitation a defence that must be pleaded by the defendant?",
+   "a": "No. Under Section 3 every suit, appeal or application filed after the prescribed period SHALL be dismissed although limitation has not been set up as a defence - the Court acts on its own."
+  },
+  {
+   "q": "What if the last day of limitation falls on a court holiday?",
+   "a": "Section 4: the suit, appeal or application may be instituted, preferred or made on the day the Court re-opens."
+  },
+  {
+   "q": "Can an appeal or application be filed late?",
+   "a": "Yes, under Section 5 only, if the appellant/applicant satisfies the Court of sufficient cause. Being misled by an order, practice or judgment of the High Court Division in computing limitation may be sufficient cause. Note: Section 5 does not extend the period for instituting a suit."
+  },
+  {
+   "q": "What if the plaintiff was a minor or insane when the right to sue accrued?",
+   "a": "Section 6: the same period runs after the disability (minority/insanity/idiotcy) ceases. If two disabilities exist, time runs after both cease; if disability continues till death, the legal representative gets the same period after death. Section 8 caps extensions at 3 years from cessation and excludes pre-emption suits."
+  },
+  {
+   "q": "How is limitation computed for an appeal?",
+   "a": "Section 12: the day the judgment was pronounced and the time requisite for obtaining a certified copy of the decree, sentence or order are excluded; for decrees, time to obtain the judgment copy is also excluded. The first day of any period is excluded."
+  },
+  {
+   "q": "What is the period for a suit to recover money lent?",
+   "a": "Three years under Arts 57-59: from when the loan is made (Art 57/59) or when a cheque given by the lender is paid (Art 58). Demand loans (Art 59) also run from the date of the loan."
+  },
+  {
+   "q": "What is the period to recover possession of immovable property?",
+   "a": "12 years: Art 142 (dispossession/discontinuance), Art 144 (residuary - when defendant's possession becomes adverse), Art 139 (landlord vs tenant, when tenancy determined)."
+  },
+  {
+   "q": "What is the residuary period if no article fits?",
+   "a": "Suits: 6 years from when the right to sue accrues (Art 120). Applications: 3 years from when the right to apply accrues (Art 181)."
+  },
+  {
+   "q": "How long to execute a civil court decree?",
+   "a": "Art 182: 3 years (or 6 years where a certified copy of the decree/order has been registered), counted from the decree, the final appellate/review/amended decree, a prior execution step, or the due date of the payment enforced. Judgments of the High Court Division (original civil jurisdiction) and Appellate Division orders: 12 years (Art 183), with fresh computation on revival, payment or written acknowledgement."
+  },
+  {
+   "q": "What is the limitation for a civil appeal to the High Court Division?",
+   "a": "90 days (Art 156); to the District Judge 30 days (Art 152); from an HCD original-jurisdiction decree 20 days (Art 151). Criminal: 60 days to HCD (Art 155), 30 days to other courts (Art 154), 7 days against death sentence (Art 150), 6 months against acquittal (Art 157)."
+  },
+  {
+   "q": "What is the effect of a written acknowledgement of a debt?",
+   "a": "Section 19: an acknowledgement of liability in writing signed by the liable party (or one through whom he derives title) made before the period expires starts a FRESH period of limitation from the date of signing."
+  },
+  {
+   "q": "Does part payment of a debt extend limitation?",
+   "a": "Yes, Section 20: a payment on account of the debt/interest before expiry by the liable person or authorised agent starts a fresh period from the payment - provided the payment is acknowledged in the payer's handwriting or a signed writing (interest payments before 1-1-1928 excepted). A mortgagee's receipt of rent or produce counts as payment."
+  },
+  {
+   "q": "What if fraud concealed my cause of action?",
+   "a": "Section 18: time runs from when the fraud first became known to the injured person, or (concealed document) from when he first had the means to produce it or compel its production."
+  },
+  {
+   "q": "What about a continuing breach of contract?",
+   "a": "Section 23: a fresh period of limitation begins at every moment during which the continuing breach or wrong continues."
+  },
+  {
+   "q": "How can an easement be acquired by possession?",
+   "a": "Section 26: 20 years' peaceable, open, as-of-right, uninterrupted enjoyment makes the right absolute and indefeasible (period must end within 2 years before the suit). Against Government property: 60 years. Asking leave once during the period defeats the claim."
+  },
+  {
+   "q": "Does limitation merely bar the remedy, or extinguish the right?",
+   "a": "For property: Section 28 - on expiry of the period for a possession suit, the right to the property itself is EXTINGUISHED. Exception: suits against express trustees for trust property (Section 10) are never barred."
+  },
+  {
+   "q": "What is the limitation for a Muslim wife's dower suit?",
+   "a": "Exigible dower (mu'ajjal): 3 years from demand-and-refusal, or from dissolution of marriage if no demand was made (Art 103). Deferred dower (mu'wajjal): 3 years from dissolution by death or divorce (Art 104)."
+  },
+  {
+   "q": "What is the period for arrears of rent?",
+   "a": "3 years from when the arrears become due (Art 110)."
+  },
+  {
+   "q": "What is the period for specific performance of a contract?",
+   "a": "One year (Art 113) - changed from 3 years by the Limitation (Amendment) Act, 2004, effective 01-07-2005. Runs from the date fixed for performance or notice of refusal. Rescission of contract is also 1 year (Art 114)."
+  },
+  {
+   "q": "Do suits by or against the Government have special limitation?",
+   "a": "Suits by or on behalf of the Government: 60 years (Art 149), computed as for a private person. Suits against Government (e.g., revenue matters, land acquisition compensation): generally 1 year (Arts 15-18)."
+  },
+  {
+   "q": "What is the period for compensation for personal injury, libel or slander?",
+   "a": "Injury to the person: 1 year from when the injury is committed (Art 22). Libel: 1 year from publication (Art 24). Slander: 1 year from the words spoken, or where not actionable in themselves, from when the special damage results (Art 25)."
+  },
+  {
+   "q": "Trespass on land - which article applies?",
+   "a": "Compensation for trespass: 3 years from the trespass (Art 39). A suit to RECOVER POSSESSION: 12 years (Arts 142/144)."
+  }
+ ]
+}

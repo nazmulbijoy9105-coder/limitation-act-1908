@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "functions": {
+    "api/*.js": { "includeFiles": "data/kb.json" }
+  },
+  "headers": [
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}
