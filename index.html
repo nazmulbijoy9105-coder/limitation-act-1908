@@ -3,100 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Limitation Act 1908 (Bangladesh) — Bilingual Legal KB</title>
-<meta name="description" content="Searchable bilingual (English/বাংলা) knowledge engine for the Limitation Act, 1908 of Bangladesh — limitation periods, deadline calculator, appeals and applications. General information only; not legal advice.">
-<meta name="theme-color" content="#0f1420">
-<meta name="robots" content="index,follow">
-<!-- Open Graph / Twitter (og:url set dynamically) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Limitation Act 1908 (Bangladesh) — Bilingual Legal KB">
-<meta property="og:description" content="All 183 schedule articles · deadline calculator · English + বাংলা. Not legal advice.">
-<meta property="og:url" content="">
-<meta name="twitter:card" content="summary">
-<link rel="canonical" href="">
+<title>Neum Lex Counsel · Limitation Act 1908 Bangladesh — Premium Legal Engine</title>
+<meta name="description" content="Premium bilingual (English/বাংলা) limitation-law engine by Neum Lex Counsel — Md Nazmul Islam, Advocate, Supreme Court of Bangladesh. 183 schedule articles, deadline calculator, expert guidance.">
+<meta name="theme-color" content="#0b1120">
+<meta property="og:title" content="Neum Lex Counsel · Limitation Act 1908 Engine">
+<meta property="og:description" content="Premium bilingual limitation-law intelligence. Advocate-crafted. Not legal advice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;800&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=3">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
 </head>
 <body>
 <header class="topbar">
   <div class="wrap bar-inner">
     <div class="brand">
-      <span class="logo">⚖️</span>
+      <div class="crest">⚖</div>
       <div>
-        <h1 data-i18n="title">Limitation Act, 1908</h1>
-        <p class="sub" data-i18n="subtitle">Bangladesh · Bilingual Knowledge Engine</p>
+        <h1>NEUM LEX COUNSEL</h1>
+        <p class="sub">Limitation Act, 1908 · Bangladesh · Premium Legal Intelligence</p>
+        <p class="credit" id="creditLine"></p>
       </div>
     </div>
-    <button id="langBtn" class="lang-btn" title="Switch language">বাংলা</button>
+    <div class="bar-actions">
+      <span id="planChip" class="plan-chip" hidden></span>
+      <button id="langBtn" class="lang-btn">বাংলা</button>
+      <button id="authBtn" class="btn gold-outline">🔐 Sign in</button>
+    </div>
   </div>
 </header>
 
 <nav class="tabs wrap" aria-label="Sections">
   <button class="tab active" data-tab="search">🔍 <span data-i18n="tab_search">Search</span></button>
   <button class="tab" data-tab="calc">📅 <span data-i18n="tab_calc">Deadline Calculator</span></button>
-  <button class="tab" data-tab="browse">📚 <span data-i18n="tab_browse">Browse Schedule</span></button>
+  <button class="tab" data-tab="browse">📚 <span data-i18n="tab_browse">Schedule</span></button>
   <button class="tab" data-tab="faq">❓ <span data-i18n="tab_faq">FAQ</span></button>
+  <button class="tab" data-tab="guide">📜 <span data-i18n="tab_guide">Guidelines</span></button>
 </nav>
 
 <main class="wrap">
+  <!-- SEARCH -->
   <section id="tab-search" class="panel active">
+    <div class="hero-strip">
+      <p>Expert computation of limitation periods · Compiled from Act No. IX of 1908 · English &amp; বাংলা</p>
+    </div>
     <div class="searchbox">
-      <input id="q" type="text" autocomplete="off" aria-label="Search"
+      <input id="q" type="text" autocomplete="off"
         placeholder='Try: "article 113" · "money lent 15/03/2022" · "স্থাবর সম্পত্তির দখল" · "section 19"'>
-      <button id="go" class="btn primary" data-i18n="btn_search">Search</button>
+      <button id="go" class="btn goldbtn" data-i18n="btn_search">Analyze</button>
     </div>
     <div class="chips">
-      <span class="chip" data-q="article 113">Article 113</span>
-      <span class="chip" data-q="recover possession of immovable property">Possession 12y</span>
-      <span class="chip" data-q="money lent 3 years deadline">Money lent</span>
-      <span class="chip" data-q="appeal to High Court Division">Appeal to HCD</span>
-      <span class="chip" data-q="ধার ফেরতের মামলার মেয়াদ">ধার (BN)</span>
-      <span class="chip" data-q="written acknowledgement of debt">Acknowledgement s.19</span>
+      <span class="chip" data-q="article 113">Art 113 · 1 year</span>
+      <span class="chip" data-q="recover possession of immovable property">Possession · 12 yrs</span>
+      <span class="chip" data-q="money lent 15/03/2022">Deadline demo</span>
+      <span class="chip" data-q="appeal to High Court Division">Appeal · 90 days</span>
+      <span class="chip" data-q="ধার ফেরতের মামলার মেয়াদ">ধার · ৩ বছর</span>
+      <span class="chip" data-q="written acknowledgement of debt">s.19 Acknowledgement</span>
     </div>
     <div id="results"></div>
   </section>
 
+  <!-- CALCULATOR -->
   <section id="tab-calc" class="panel">
-    <div class="card pad">
-      <h2 data-i18n="calc_h">Deadline Calculator</h2>
-      <p class="muted" data-i18n="calc_p">Pick the provision, enter the date the period began. Section 12 excludes the first day, so the last day = start + full period.</p>
-      <div class="grid2">
-        <label><span data-i18n="calc_prov">Provision</span>
-          <select id="calcArt" aria-label="Provision"></select></label>
-        <label><span data-i18n="calc_date">Period begins on</span>
-          <input id="calcDate" type="date" aria-label="Start date"></label>
+    <div class="calc-layout">
+      <div class="card pad">
+        <h2 class="serif">Deadline Calculator</h2>
+        <p class="muted" data-i18n="calc_p">Select the statutory provision and the date the period began. Under section 12, the first day is excluded — the last day equals start + full period.</p>
+        <label class="field"><span data-i18n="calc_prov">Provision</span>
+          <select id="calcArt"></select>
+          <small id="calcCount" class="muted"></small></label>
+        <label class="field"><span data-i18n="calc_date">Period begins on</span>
+          <input id="calcDate" type="date"></label>
+        <button id="calcGo" class="btn goldbtn wide" data-i18n="calc_btn">Compute last day</button>
       </div>
-      <button id="calcGo" class="btn primary" data-i18n="calc_btn">Compute last day</button>
-      <div id="calcOut"></div>
+      <div>
+        <div id="calcOut" class="calc-out">
+          <div class="card pad empty-hint">
+            <div class="empty-ico">🗓️</div>
+            <p class="muted">Your verdict card will appear here — with the exact last day, weekday, and a live countdown.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- BROWSE -->
   <section id="tab-browse" class="panel">
-    <input id="browseFilter" class="filter" placeholder="Filter… / ফিল্টার" aria-label="Filter schedule">
+    <input id="browseFilter" class="filter" placeholder="Filter… / ফিল্টার">
     <div id="browse"></div>
   </section>
 
+  <!-- FAQ -->
   <section id="tab-faq" class="panel">
     <div id="faqList"></div>
   </section>
+
+  <!-- GUIDELINES -->
+  <section id="tab-guide" class="panel">
+    <div class="card pad guide">
+      <h2 class="serif">User Guidelines &amp; Terms</h2>
+
+      <h3>1. Purpose</h3>
+      <p>Neum Lex Counsel provides a curated, bilingual reference to the Limitation Act, 1908 (Act No. IX of 1908) — including every article of the First Schedule (Suits, Appeals, Applications), governing sections, and a computation utility reflecting section 12. It is designed for advocates, law students, litigants-in-person and researchers.</p>
+
+      <h3>2. How to Use</h3>
+      <ul>
+        <li><b>Search</b> — describe your cause in plain English or বাংলা, or cite an article/section number directly.</li>
+        <li><b>Deadline Calculator</b> — choose the provision and the date the period began; the verdict card shows the last day with weekday and countdown. Remember: the first day is excluded (s.12).</li>
+        <li><b>Schedule</b> — browse all 183 articles across the three Divisions.</li>
+        <li><b>Free access</b> — Schedule, FAQ and Guidelines are free. Search and Calculator: <b>3 complimentary analyses</b> per registered account, thereafter a subscription is required.</li>
+      </ul>
+
+      <h3>3. Interpretation Caution</h3>
+      <p>Limitation is a subtle branch of law. Sections 4–25 permit exclusions and extensions (court closure, sufficient cause, legal disability, absence of the defendant, fraud, written acknowledgement, part payment, injunctions, prior proceedings). Special statutes may prescribe different periods (s.29). The calculator reflects the bare Act only; it cannot weigh your facts.</p>
+
+      <h3>4. Subscription Terms</h3>
+      <ul>
+        <li>Plans: 1 month ৳100 · 3 months ৳200 · 6 months ৳400 · 12 months ৳550.</li>
+        <li>Payment via bKash/Nagad ‘Send Money’ to the numbers shown at checkout, followed by TrxID submission.</li>
+        <li>Activation follows manual verification — ordinarily within a few hours.</li>
+        <li>A plan extends from the current expiry (stackable) once approved.</li>
+      </ul>
+
+      <h3>5. Refund Policy</h3>
+      <p>Subscription access is a digital service. Where a verified payment has not been activated within 72 hours, contact counsel@neumlex — we will activate promptly or refund in full. No refunds after activation, save for demonstrated duplication of payment.</p>
+
+      <h3>6. Acceptable Use</h3>
+      <p>One account per person. Automated scraping, credential sharing or resale of access is prohibited and may result in termination without refund.</p>
+
+      <h3>7. Legal Disclaimer</h3>
+      <p class="emph">This platform offers general legal information — it is not legal advice and does not create an advocate–client relationship. Statutes are amended and case law evolves; the bare Act is presented as published in the Laws of Bangladesh. Before instituting any suit, appeal or application, verify computation and strategy with a qualified advocate.</p>
+
+      <div class="guide-credit" id="guideCredit"></div>
+    </div>
+  </section>
 </main>
+
+<!-- AUTH MODAL -->
+<div id="authModal" class="modal">
+  <div class="sheet">
+    <button class="x" data-close>✕</button>
+    <div class="crest big">⚖</div>
+    <h3 class="serif center">Welcome to Neum Lex Counsel</h3>
+    <p class="muted center">Sign in to use your 3 complimentary analyses.</p>
+    <div class="mtabs">
+      <button class="mtab active" data-pane="paneMobile">📱 Mobile</button>
+      <button class="mtab" data-pane="paneGoogle">📧 Gmail</button>
+    </div>
+    <div id="paneMobile" class="mpane active">
+      <div class="minitabs">
+        <button class="minitab active" data-form="login">Sign in</button>
+        <button class="minitab" data-form="signup">Create account</button>
+      </div>
+      <div id="formLogin">
+        <label>Mobile number<input id="liMobile" placeholder="01712345678" autocomplete="username"></label>
+        <label>Password<input id="liPass" type="password" autocomplete="current-password"></label>
+        <button id="doLogin" class="btn goldbtn wide">Sign in</button>
+      </div>
+      <div id="formSignup" hidden>
+        <label>Full name<input id="suName" placeholder="e.g. Abdul Karim"></label>
+        <label>Mobile number<input id="suMobile" placeholder="01712345678"></label>
+        <label>Create password (min 6 chars)<input id="suPass" type="password"></label>
+        <button id="doSignup" class="btn goldbtn wide">Create account — 3 free analyses</button>
+      </div>
+    </div>
+    <div id="paneGoogle" class="mpane">
+      <p class="muted center">One click with your Google account.</p>
+      <button id="doGoogle" class="btn gbtn wide">Continue with Gmail</button>
+    </div>
+    <div id="authErr" class="formerr" hidden></div>
+  </div>
+</div>
+
+<!-- PAY / ACCOUNT MODAL -->
+<div id="payModal" class="modal">
+  <div class="sheet wide-sheet">
+    <button class="x" data-close>✕</button>
+    <div id="payBody"></div>
+  </div>
+</div>
 
 <footer class="foot">
   <div class="wrap">
+    <div class="foot-brand">
+      <div class="crest small">⚖</div>
+      <div>
+        <b>NEUM LEX COUNSEL</b>
+        <p id="creditLine2" class="credit"></p>
+      </div>
+    </div>
     <p id="footDisc"></p>
     <p class="muted small">Source: The Limitation Act, 1908 (Act No. IX of 1908) · Laws of Bangladesh ·
-    Deployed on Vercel · <a href="/api/search?q=article%20113">JSON API</a></p>
+    <a href="/api/search?q=article%20113">Public JSON API</a></p>
   </div>
 </footer>
-<noscript><div class="disc">This app requires JavaScript. Data API: /api/search?q=…</div></noscript>
+<noscript><div class="disc">JavaScript is required. Data API: /api/search?q=…</div></noscript>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="config.js?v=3"></script>
+<script src="auth.js?v=3"></script>
+<script src="payments.js?v=3"></script>
+<script src="app.js?v=3"></script>
 <script>
-/* set absolute og:url + canonical to current deployment */
-document.querySelectorAll('meta[property="og:url"],link[rel="canonical"]')
-  .forEach(el=>{el.content||(el.content=location.href);el.href&&(el.href=location.href);});
+document.getElementById('creditLine2').textContent=document.getElementById('creditLine').textContent;
+document.getElementById('guideCredit').textContent=document.getElementById('creditLine').textContent;
 </script>
-<script src="app.js?v=2"></script>
 </body>
 </html>

@@ -2,26 +2,18 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
-  "functions": {
-    "api/*.js": { "includeFiles": "data/kb.json" }
-  },
+  "functions": { "api/*.js": { "includeFiles": "data/kb.json" } },
   "headers": [
-    {
-      "source": "/(.*)",
+    { "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
-      ]
-    },
-    {
-      "source": "/data/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
-    }
+      ]},
+    { "source": "/data/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]},
+    { "source": "/api/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]}
   ]
 }

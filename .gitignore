@@ -1,6 +1,9 @@
+premium_upgrade.py
+upgrade_production.py
+gen_web.py
+make_site.py
 .vercel
 node_modules/
 .DS_Store
 *.log
 __pycache__/
-upgrade_production.py

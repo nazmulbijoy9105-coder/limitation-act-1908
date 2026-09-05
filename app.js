@@ -1,6 +1,8 @@
+const APP_V='3';
 /* ============================================================
-   Limitation Act 1908 — PRODUCTION client engine v2
-   BM25 search · s.12 calculator · EN/BN · hardened init
+   Neum Lex Counsel · Limitation Act 1908 Engine v3 (premium)
+   BM25 search · s.12 calculator (desktop verdict card) · EN/BN
+   Gated by NLC (auth) — 3 free analyses then subscription
    ============================================================ */
 let KB=null, BN=null, LANG='en', IDX=null, DOCS=[];
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -17,79 +19,53 @@ const RX_DEF=/\b(define|definition|meaning)\b|সংজ্ঞা|মানে|�
 const MONTHS={jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12};
 
 const I18N={
-en:{title:'Limitation Act, 1908',subtitle:'Bangladesh · Bilingual Knowledge Engine',
- tab_search:'Search',tab_calc:'Deadline Calculator',tab_browse:'Browse Schedule',tab_faq:'FAQ',
- btn_search:'Search',calc_h:'Deadline Calculator',
- calc_p:'Pick the provision, enter the date the period began. Section 12 excludes the first day, so the last day = start + full period.',
- calc_prov:'Provision',calc_date:'Period begins on',calc_btn:'Compute last day',
- matched:'Matched',period:'Period',start:'Start',last:'Last day',
- expired:'EXPIRED — the computed last day is already in the past (extensions under ss.4–25 may still save the claim).',
- urgent:d=>`URGENT — only ${d} day(s) remain before the computed last day.`,
- nomatch:'No match found. Try naming the article or section, e.g. "article 142".',
- nodate:'Please enter a date.',
- disc:'⚖ DISCLAIMER — General information from the Limitation Act, 1908 (Bangladesh) KB. NOT legal advice. Time may be excluded or extended under sections 4–25 (court closure s.4; sufficient cause s.5; disability ss.6–8; defendant abroad s.13; wrong forum s.14; injunctions s.15; fraud s.18; written acknowledgement s.19; part payment s.20). A qualified advocate must verify before filing.'},
-bn:{title:'সীমাবদ্ধন (তামাদি) আইন, ১৯০৮',subtitle:'বাংলাদেশ · দ্বিভাষিক নলেজ ইঞ্জিন',
- tab_search:'অনুসন্ধান',tab_calc:'মেয়াদ গণনা',tab_browse:'তফসিল ব্রাউজ',tab_faq:'প্রশ্নোত্তর',
- btn_search:'খুঁজুন',calc_h:'মেয়াদ গণনা',
- calc_p:'বিধান নির্বাচন করুন, মেয়াদ শুরুর তারিখ দিন। ধারা ১২ অনুযায়ী প্রথম দিন বাদ যায় — শেষ দিন = শুরু + পূর্ণ মেয়াদ।',
- calc_prov:'বিধান',calc_date:'মেয়াদ শুরু',calc_btn:'শেষ দিন গণনা করুন',
- matched:'মিলে যাওয়া বিধান',period:'তামাদির মেয়াদ',start:'শুরু',last:'শেষ দিন',
- expired:'বলীয়ান — গণনাকৃত শেষ দিন ইতিমধ্যে অতিবাহিত (ধারা ৪–২৫ অনুযায়ী সময় বৃদ্ধি সম্ভব)।',
+en:{tab_search:'Search',tab_calc:'Deadline Calculator',tab_browse:'Schedule',tab_faq:'FAQ',tab_guide:'Guidelines',
+ btn_search:'Analyze',matched:'Matched',period:'Statutory period',start:'Period begins',last:'Last day to institute',
+ expired:d=>`EXPIRED — ${d} day(s) past the last day (extensions under ss.4–25 may still save the claim).`,
+ urgent:d=>`URGENT — only ${d} day(s) remain. Do not delay.`,
+ alive:d=>`Time remaining — ${d} day(s).`,
+ nomatch:'No provision matched. Try an article/section number, e.g. “article 142”.',
+ nodate:'Please choose or type a start date.',
+ s12:'Section 12 excludes the day from which the period is reckoned; the last day therefore equals start + full period. Exclusions/extensions may apply under ss.4–25.',
+ disc:'⚖ DISCLAIMER — This platform provides general legal information compiled from the Limitation Act, 1908 (Bangladesh). Nothing herein constitutes legal advice, nor creates an advocate–client relationship. Statutory periods may be extended, excluded or saved under sections 4–25 and by special laws (s.29). Before instituting any suit, appeal or application, verify computation with a qualified advocate. Neum Lex Counsel and the developer accept no liability for reliance placed on this tool.'},
+bn:{tab_search:'অনুসন্ধান',tab_calc:'মেয়াদ গণনা',tab_browse:'তফসিল',tab_faq:'প্রশ্নোত্তর',tab_guide:'নির্দেশিকা',
+ btn_search:'বিশ্লেষণ',matched:'মিলে যাওয়া বিধান',period:'তামাদির মেয়াদ',start:'মেয়াদ শুরু',last:'দায়েরের শেষ দিন',
+ expired:d=>`বলীয়ান — শেষ দিন অতিক্রান্ত হয়েছে ${en2bn(d)} দিন (ধারা ৪–২৫ অনুযায়ী সময় বৃদ্ধি সম্ভব)।`,
  urgent:d=>`সতর্কতা — মাত্র ${en2bn(d)} দিন বাকি!`,
- nomatch:'কোনো মিল পাওয়া যায়নি। অনুচ্ছেদ/ধারার নম্বর দিয়ে চেষ্টা করুন।',
- nodate:'তারিখ দিন।',
- disc:'⚖ দাবিত্যাগ — সীমাবদ্ধন আইন ১৯০৮ নলেজ-বেস থেকে প্রাপ্ত সাধারণ তথ্য; আইনি পরামর্শ নয়। ধারা ৪–২৫ অনুযায়ী সময় বাদ/বৃদ্ধি পেতে পারে (আদালত বন্ধ — ধারা ৪; পর্যাপ্ত কারণ — ধারা ৫; অক্ষমতা — ধারা ৬–৮; প্রতিবাদীর অনুপস্থিতি — ধারা ১৩; ভুল আদালত — ধারা ১৪; নিষেধাজ্ঞা — ধারা ১৫; প্রতারণা — ধারা ১৮; লিখিত স্বীকৃতি — ধারা ১৯; আংশিক পরিশোধ — ধারা ২০)। দায়েরের পূর্বে অবশ্যই আইনজীবী দ্বারা যাচাই করুন।'}};
+ alive:d=>`অবশিষ্ট সময় — ${en2bn(d)} দিন।`,
+ nomatch:'কোনো বিধান মেলেনি। অনুচ্ছেদ/ধারার নম্বর দিন, যেমন “অনুচ্ছেদ ১৪২”।',
+ nodate:'শুরুর তারিখ দিন।',
+ s12:'ধারা ১২ অনুযায়ী যে দিন থেকে মেয়াদ গণনা শুরু হয় সেই দিন বাদ যায়; ফলে শেষ দিন = শুরু + পূর্ণ মেয়াদ। ধারা ৪–২৫ অনুযায়ী সময় বাদ/বৃদ্ধি হতে পারে।',
+ disc:'⚖ দাবিত্যাগ — এই প্ল্যাটফর্ম সীমাবদ্ধন আইন, ১৯০৮ (বাংলাদেশ) থেকে সংকলিত সাধারণ আইনি তথ্য প্রদান করে; এটি আইনি পরামর্শ নয় এবং আইনজীবী–ক্লায়েন্ট সম্পর্ক সৃষ্টি করে না। ধারা ৪–২৫ ও বিশেষ আইনের (ধারা ২৯) অধীনে মেয়াদ বাদ/বৃদ্ধি/রক্ষা পেতে পারে। মামলা দায়েরের পূর্বে অবশ্যই যোগ্য আইনজীবী দ্বারা গণনা যাচাই করুন।'}};
 const t=k=>I18N[LANG][k];
+const WD={en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+          bn:['রবিবার','সোমবার','মঙ্গলবার','বুধবার','বৃহস্পতিবার','শুক্রবার','শনিবার']};
+const MON={en:['January','February','March','April','May','June','July','August','September','October','November','December'],
+           bn:['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর']};
 
-/* ---------- boot: hardened ---------- */
+/* ---------- boot ---------- */
 (async function init(){
   try{
     const [kbRes,bnRes]=await Promise.all([
-      fetch('data/kb.json?v=2'),
-      fetch('data/bn.json?v=2').catch(()=>null)]);
-    if(!kbRes.ok) throw new Error('kb.json HTTP '+kbRes.status+' — data/ missing in deployment?');
+      fetch('data/kb.json?v='+APP_V),
+      fetch('data/bn.json?v='+APP_V).catch(()=>null)]);
+    if(!kbRes.ok) throw new Error('kb.json HTTP '+kbRes.status);
     KB=await kbRes.json();
     BN=(bnRes&&bnRes.ok)?await bnRes.json():{};
-    const probs=validateKB(KB);
-    if(probs.length)console.warn('[KB warnings]',probs);
     DOCS=buildDocs();
-    const withPeriod=DOCS.filter(d=>d.type==='article'&&d.period).length;
-    if(withPeriod<50)throw new Error('Only '+withPeriod+' parsable articles — KB schema mismatch.');
+    const calc=DOCS.filter(d=>d.type==='article'&&d.period).length;
+    if(calc<50) throw new Error('Only '+calc+' calculable articles — check data/kb.json');
     IDX=buildIndex(DOCS);
-    wireUI();               // ✅ defined below — crash fixed
-    fillCalcSelect();
-    renderBrowse('');
-    renderFAQ();
+    wireUI(); fillCalcSelect(); renderBrowse(''); renderFAQ();
     $('#footDisc').textContent=t('disc');
-    if(probs.length)banner('⚠ Loaded with warnings: '+probs.slice(0,3).join(' | '),'warnline urgent');
-    console.log('[init] OK —',DOCS.length,'docs,',withPeriod,'calculable articles');
-  }catch(err){
-    console.error('[init]',err);
-    banner('❌ Init failed: '+err.message+' — see F12 Console');
-  }
+    $('#creditLine').textContent=NLC.cfg.brand.credit();
+    console.log('[init] OK —',DOCS.length,'docs ·',calc,'calculable · v'+APP_V);
+  }catch(err){ console.error('[init]',err); banner('❌ '+err.message); }
 })();
+function banner(m){const el=document.createElement('div');el.className='disc';el.style.borderColor='#e74c3c';
+  el.textContent=m;document.querySelector('main .wrap')?.prepend(el);}
 
-function validateKB(kb){
-  const p=[];
-  if(!kb)return['KB null'];
-  if(!Array.isArray(kb.sections))p.push('sections missing');
-  if(!Array.isArray(kb.faq))p.push('faq missing');
-  if(!Array.isArray(kb.definitions))p.push('definitions missing');
-  if(!kb.schedule)return p.concat('schedule missing');
-  for(const[div,arts]of Object.entries(kb.schedule)){
-    if(!Array.isArray(arts)){p.push(div+':not array');continue;}
-    arts.forEach(a=>{if(!a||!a.a)p.push(div+':bad entry');
-      else if(!a.omitted&&(!a.p||!a.d))p.push('A'+a.a+':missing '+(a.p?'':'p ')+(a.d?'':'d'));});
-  }
-  return p;
-}
-function banner(msg,cls){
-  const el=document.createElement('div');
-  el.className='disc '+(cls||'');el.style.borderColor='#e74c3c';el.textContent=msg;
-  document.querySelector('main .wrap')?.prepend(el);
-}
-
-/* ---------- docs ---------- */
+/* ---------- docs / index / search (as v2) ---------- */
 function buildDocs(){
   const D=[];const PB=BN.periods_bn||{};
   (KB.definitions||[]).forEach(d=>{const b=(BN.definitions_bn||{})[d.term];
@@ -120,30 +96,22 @@ function buildDocs(){
       raw:'faq '+f.q+' '+f.a+' '+(b?b.q+' '+b.a:'')});});
   return D;
 }
-
-/* ---------- BM25 ---------- */
 const tok=s=>bn2en(String(s??'')).toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').split(' ').filter(Boolean);
-function buildIndex(docs){
-  const toks=docs.map(d=>tok(d.raw));const df={};
+function buildIndex(docs){const toks=docs.map(d=>tok(d.raw));const df={};
   toks.forEach(ts=>new Set(ts).forEach(w=>df[w]=(df[w]||0)+1));
   const avgdl=toks.reduce((a,x)=>a+x.length,0)/(docs.length||1)||1;
-  return{N:docs.length,df,avgdl,toks};
-}
-function glossaryExpand(q){
-  const ql=q.toLowerCase();const extra=[];
+  return{N:docs.length,df,avgdl,toks};}
+function glossaryExpand(q){const ql=q.toLowerCase();const extra=[];
   (BN.glossary||[]).forEach(g=>{
     if(ql.includes(g.en.toLowerCase())&&!q.includes(g.bn))extra.push(g.bn);
     else if(q.includes(g.bn)&&!ql.includes(g.en.toLowerCase()))extra.push(g.en);});
-  return q+' '+extra.slice(0,6).join(' ');
-}
-function search(q,k=6){
-  const qt=tok(glossaryExpand(q));if(!qt.length)return[];
+  return q+' '+extra.slice(0,6).join(' ');}
+function search(q,k=6){const qt=tok(glossaryExpand(q));if(!qt.length)return[];
   return DOCS.map((d,i)=>{let s=0;const ts=IDX.toks[i];
     for(const w of qt){let tf=0;for(const x of ts)if(x===w)tf++;
       if(!tf)continue;const f=IDX.df[w]||0;
       s+=Math.log(1+(IDX.N-f+.5)/(f+.5))*tf*2.2/(tf+1.2*(.25+.75*ts.length/IDX.avgdl));}
-    return[d,s];}).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,k);
-}
+    return[d,s];}).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,k);}
 
 /* ---------- parsers ---------- */
 function getArt(q){const m=RX_ART.exec(bn2en(q));if(!m)return null;
@@ -166,8 +134,37 @@ function addPeriod(dt,pv,pu){const d=new Date(dt);
     d.setUTCDate(Math.min(d.getUTCDate(),dim(y,d.getUTCMonth())));}
   return d;}
 
-/* ---------- query pipeline ---------- */
-function runQuery(qRaw){
+/* ---------- premium date formatting (desktop verdict card) ---------- */
+function fmtFull(d){
+  const dt=new Date(d),L=LANG;
+  const wd=WD[L][dt.getUTCDay()],mo=MON[L][dt.getUTCMonth()];
+  const dd=(L==='bn')?en2bn(dt.getUTCDate()):dt.getUTCDate();
+  const yy=(L==='bn')?en2bn(dt.getUTCFullYear()):dt.getUTCFullYear();
+  return wd+', '+dd+' '+mo+' '+yy;
+}
+function verdictHTML(hit,start,end,days){
+  let chip,cls;
+  if(days<0){chip=t('expired')(Math.abs(days));cls='expired';}
+  else if(days<=30){chip=t('urgent')(days);cls='urgent';}
+  else{chip=t('alive')(days);cls='ok';}
+  return `<div class="verdict ${cls}">
+    <div class="v-badge">${esc(hit.cite)}</div>
+    <div class="v-title">${esc(hit.title)}</div>
+    <div class="v-grid">
+      <div class="v-col"><span>${esc(t('start'))}</span><b>${esc(fmtFull(start))}</b></div>
+      <div class="v-arrow">⟶</div>
+      <div class="v-col last"><span>${esc(t('last'))}</span><b class="goldtxt">${esc(fmtFull(end))}</b></div>
+    </div>
+    <div class="v-meta"><span>${esc(t('period'))}:</span> <b>${esc(LANG==='bn'?((BN.periods_bn||{})[hit.period]||hit.period):hit.period)}</b>
+      · <span>${esc((hit.begin||'').slice(0,90))}</span></div>
+    <div class="v-chip ${cls}">${esc(chip)}</div>
+    <div class="ensnip">${esc(t('s12'))}</div>
+  </div>`;
+}
+
+/* ---------- gated query pipeline ---------- */
+async function runQuery(qRaw){
+  if(!(await NLC.gate('search'))) return;
   try{
     const q=(qRaw||'').trim();if(!q)return;
     const art=getArt(q),sec=getSec(q),dt=parseDate(q);
@@ -179,14 +176,8 @@ function runQuery(qRaw){
         const end=addPeriod(dt,pp.n,pp.u);
         const today=new Date();today.setUTCHours(0,0,0,0);
         const days=Math.round((end-today)/864e5);
-        let warn='';
-        if(days<0)warn='<div class="warnline expired">⚠ '+esc(t('expired'))+'</div>';
-        else if(days<=30)warn='<div class="warnline urgent">⚠ '+esc(t('urgent')(days))+'</div>';
         $('#results').innerHTML=
-          card(hit,'<div class="calcbox"><div>'+esc(t('matched'))+': <b>'+esc(hit.cite)+'</b> — '+esc(short(hit.title))+
-            '</div><div>'+esc(t('period'))+': <b>'+esc(hit.period)+'</b></div><div>'+esc(t('start'))+': <b>'+fmtDate(dt)+'</b></div>'+
-            '<div class="big">'+esc(t('last'))+': '+fmtDate(end)+'</div>'+warn+
-            '<div class="ensnip">s.12 excludes the first day; further exclusions under ss.4, 13–16, 19–20 may apply.</div></div>')+
+          card(hit,verdictHTML(hit,dt,end,days))+
           results(search(q,4).filter(x=>x[0]!==hit))+discBlock();
         return;
       }
@@ -217,39 +208,31 @@ function card(d,extra=''){
     esc(d.title)+'</p>'+(d.period?pill(d.period):'')+'<div class="rbody">'+body+'</div>'+(extra||'')+'</div>';}
 const results=res=>res.map(([d])=>card(d)).join('');
 const discBlock=()=>'<div class="disc">'+esc(t('disc'))+'</div>';
-function fmtDate(d){const s=d.toISOString().slice(0,10);return LANG==='bn'?en2bn(s):s;}
 
-/* ---------- calculator ---------- */
+/* ---------- calculator tab ---------- */
 function fillCalcSelect(){
-  const sel=$('#calcArt');if(!sel){console.error('#calcArt missing');return;}
+  const sel=$('#calcArt');if(!sel)return;
   sel.innerHTML='';let n=0;
   for(const[div,arts]of Object.entries(KB.schedule||{}))
     (arts||[]).filter(a=>a&&a.p).forEach(a=>{
       const o=document.createElement('option');o.value=a.a;
-      o.textContent='Art '+a.a+' — '+short(a.d,55)+' ('+a.p+')';sel.appendChild(o);n++;});
-  if(!n){sel.innerHTML='<option value="">— no provisions loaded —</option>';
-    banner('⚠ Calculator: 0 provisions parsed — see Console [KB warnings]');}
-  else{const o57=[...sel.options].find(o=>o.value==='57');if(o57)sel.value='57';}
-  console.log('[calc] '+n+' provisions in dropdown');
+      o.textContent='Art '+a.a+' — '+short(a.d,52)+' ('+a.p+')';sel.appendChild(o);n++;});
+  const o57=[...sel.options].find(o=>o.value==='57');if(o57)sel.value='57';
+  $('#calcCount').textContent=n+' provisions loaded';
 }
-function runCalc(){
+async function runCalc(){
+  if(!(await NLC.gate('calc'))) return;
   const out=$('#calcOut'),aid=$('#calcArt').value,dval=$('#calcDate').value;
-  if(!aid){out.innerHTML='<div class="disc">⚠ '+esc(t('nomatch'))+'</div>';return;}
   if(!dval){out.innerHTML='<div class="disc">'+esc(t('nodate'))+'</div>';return;}
   const doc=DOCS.find(d=>d.cite==='A'+aid);const pp=doc&&parsePeriod(doc.period);
   if(!doc||!pp){out.innerHTML='<div class="disc">⚠ Cannot compute for Art '+esc(aid)+'</div>';return;}
   const start=new Date(dval+'T00:00:00Z'),end=addPeriod(start,pp.n,pp.u);
   const today=new Date();today.setUTCHours(0,0,0,0);
   const days=Math.round((end-today)/864e5);
-  let warn='';
-  if(days<0)warn='<div class="warnline expired">⚠ '+esc(t('expired'))+'</div>';
-  else if(days<=30)warn='<div class="warnline urgent">⚠ '+esc(t('urgent')(days))+'</div>';
-  out.innerHTML=card(doc,'<div class="calcbox"><div>'+esc(t('start'))+': <b>'+fmtDate(start)+
-    '</b></div><div class="big">'+esc(t('last'))+': '+fmtDate(end)+'</div>'+warn+
-    '<div class="ensnip">s.12 excludes the first day · ss.4–25 exclusions may apply.</div></div>')+discBlock();
+  out.innerHTML=card(doc,verdictHTML(doc,start,end,days))+discBlock();
 }
 
-/* ---------- browse ---------- */
+/* ---------- browse / faq ---------- */
 const DIV_NAMES={division_1_suits:['First Division — Suits','প্রথম বিভাগ — মামলা'],
  division_2_appeals:['Second Division — Appeals','দ্বিতীয় বিভাগ — আপিল'],
  division_3_applications:['Third Division — Applications','তৃতীয় বিভাগ — আবেদন']};
@@ -268,8 +251,6 @@ function renderBrowse(filter){
     html+='</table>';}
   $('#browse').innerHTML=html||'<div class="card muted">No results.</div>';
 }
-
-/* ---------- faq ---------- */
 function renderFAQ(){
   $('#faqList').innerHTML=(KB.faq||[]).map((f,i)=>{
     const b=(BN.faq_bn||{})[String(i)];
@@ -277,7 +258,7 @@ function renderFAQ(){
     return'<div class="faq-q">'+esc(qq)+'</div><div class="faq-a">'+esc(aa)+'</div>';}).join('');
 }
 
-/* ---------- events (single source of truth) ---------- */
+/* ---------- events ---------- */
 function showTab(name){
   $$('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));
   $$('.panel').forEach(p=>p.classList.toggle('active',p.id==='tab-'+name));}
@@ -293,8 +274,7 @@ function wireUI(){
     const tr=e.target.closest('tr.row');if(!tr)return;
     const doc=DOCS.find(d=>d.cite===tr.dataset.cite);
     if(doc){showTab('search');$('#q').value=doc.cite.replace('A','Article ');
-      $('#results').innerHTML=card(doc)+discBlock();
-      window.scrollTo({top:0,behavior:'smooth'});}});
+      runQuery($('#q').value);window.scrollTo({top:0,behavior:'smooth'});}});
   $('#calcGo').onclick=runCalc;
   $('#langBtn').onclick=()=>{
     LANG=LANG==='en'?'bn':'en';
