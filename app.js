@@ -45,8 +45,8 @@ const t=k=>I18N[LANG][k];
 (async function init(){
   try{
     const [kbRes,bnRes]=await Promise.all([
-      fetch('data/kb.json?v='+V),
-      fetch('data/bn.json?v='+V).catch(()=>null)]);
+      fetch('data/kb.json?v=2),
+      fetch('data/bn.json?v=2).catch(()=>null)]);
     if(!kbRes.ok) throw new Error('kb.json HTTP '+kbRes.status+' — data/ missing in deployment?');
     KB=await kbRes.json();
     BN=(bnRes&&bnRes.ok)?await bnRes.json():{};
