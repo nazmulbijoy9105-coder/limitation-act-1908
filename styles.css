@@ -1,20 +1,20 @@
 :root{
-  --bg:#0b1120;--bg2:#0e1526;--panel:#121b31;--panel2:#182342;--line:#26324f;
-  --txt:#eef2fb;--mut:#9aa8c7;--gold:#c9a227;--gold2:#e6c766;--ivory:#f5ecd7;
+  --bg:#ffffff;--bg2:#0e1526;--panel:#ffffff;--panel2:#f3f5f9;--line:#e4e8ef;
+  --txt:#161d2b;--mut:#5c6575;--gold:#c9a227;--gold2:#8a6d1f;--ivory:#f5ecd7;
   --acc:#4f8cff;--good:#2ecc71;--warn:#f39c12;--bad:#e74c3c;
 }
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 500px at 50% -10%,#152039 0%,var(--bg) 55%);
+body{margin:0;background:radial-gradient(1200px 500px at 50% -10%,#eef2f8 0%,#ffffff 55%);
   color:var(--txt);font-family:'Inter','Noto Serif Bengali',system-ui,sans-serif;line-height:1.6}
 body.bn{font-family:'Noto Serif Bengali','Inter',sans-serif}
 .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
 .serif,h1,h2,.divh,.pay-title,.sheet h3{font-family:'Cormorant Garamond','Noto Serif Bengali',serif}
 
-.topbar{background:linear-gradient(180deg,#0d1526,#0b1120);border-bottom:1px solid var(--line)}
+.topbar{background:#ffffff;border-bottom:1px solid var(--line)}
 .bar-inner{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px}
 .brand{display:flex;gap:14px;align-items:center}
 .crest{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:26px;
-  background:linear-gradient(145deg,#1b2745,#0e1526);border:1px solid var(--gold);
+  background:#ffffff;border:1px solid var(--gold);
   box-shadow:0 0 0 3px rgba(201,162,39,.12), inset 0 0 18px rgba(201,162,39,.15);color:var(--gold2)}
 .crest.big{width:64px;height:64px;margin:0 auto 10px}
 .crest.small{width:40px;height:40px;font-size:20px}
