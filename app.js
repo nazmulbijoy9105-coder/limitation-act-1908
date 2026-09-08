@@ -280,6 +280,7 @@ function wireUI(){
     LANG=LANG==='en'?'bn':'en';
     document.body.classList.toggle('bn',LANG==='bn');
     $('#langBtn').textContent=LANG==='bn'?'English':'বাংলা';
+  document.documentElement.lang = LANG;
     $$('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(I18N[LANG][k])el.textContent=I18N[LANG][k];});
     $('#footDisc').textContent=t('disc');
     renderBrowse($('#browseFilter').value);renderFAQ();
