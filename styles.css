@@ -1,5 +1,5 @@
 :root{
-  --bg:#ffffff;--bg2:#0e1526;--panel:#ffffff;--panel2:#f3f5f9;--line:#e4e8ef;
+  --bg:#ffffff;--bg2:#eef2f8;--panel:#ffffff;--panel2:#f3f5f9;--line:#e4e8ef;
   --txt:#161d2b;--mut:#5c6575;--gold:#c9a227;--gold2:#8a6d1f;--ivory:#f5ecd7;
   --acc:#4f8cff;--good:#2ecc71;--warn:#f39c12;--bad:#e74c3c;
 }
@@ -121,7 +121,7 @@ td.per{white-space:nowrap;font-weight:700}
 .modal{display:none;position:fixed;inset:0;background:rgba(5,8,16,.72);backdrop-filter:blur(4px);
   z-index:50;place-items:center;padding:18px}
 .modal.open{display:grid}
-.sheet{background:linear-gradient(170deg,#141d33,#0e1526);border:1px solid var(--gold);
+.sheet{background:#ffffff;border:1px solid var(--gold);
   border-radius:16px;padding:26px;width:100%;max-width:430px;position:relative;
   box-shadow:0 24px 60px rgba(0,0,0,.5);max-height:90vh;overflow:auto}
 .wide-sheet{max-width:560px}
