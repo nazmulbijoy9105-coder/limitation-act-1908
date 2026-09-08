@@ -2,7 +2,7 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
-  "functions": { "api/*.js": { "includeFiles": "data/kb.json" } },
+  "functions": { "api/*.js": { "includeFiles": "data/*.json" } },
   "headers": [
     { "source": "/(.*)",
       "headers": [
